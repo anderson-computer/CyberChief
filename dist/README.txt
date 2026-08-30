@@ -4,11 +4,11 @@ Comic Series by Mike Anderson
 
 CONTENTS
 --------
-  issues/         HTML comic book files (Issues #1-5 + Index)
+  issues/         HTML comic book files (Issues #1-6 + Index)
   art/            Artwork and cover images
   Windows/        Windows launcher and installer
   Linux/          Linux launcher and installer
-  pdfs/           PDF versions of all 5 issues
+  pdfs/           PDF versions of the issues
 
 
 QUICK START — READ WITHOUT INSTALLING
@@ -17,6 +17,7 @@ Just open:  issues/index.html  in any web browser.
 
   Windows : Double-click  Windows\Launch-LRN-Man.bat
   Linux   : Run           Linux/launch-lrn-man.sh
+  macOS   : Open          issues/index.html  directly in Safari/Chrome/Firefox
   Any OS  : Open          issues/index.html  directly in your browser
 
 
@@ -46,6 +47,7 @@ ISSUES IN THIS SERIES
   #3  The Botnet Invasion            — When the Machines Rise
   #4  The Social Engineer            — Hook, Line, and Sinker
   #5  The Quantum Conspiracy         — When Encryption Falls, Chaos Reigns
+  #6  The Signal from Maytag         — Containers of Chaos
 
 
 SYSTEM REQUIREMENTS

@@ -1,0 +1,50 @@
+[
+  {
+    "scene": 1,
+    "title": "Signal in the Dark",
+    "purpose": "Establish the cyber-noir tone and reveal the first sign of Null activity.",
+    "reference_image": "/home/mike/dev/LRN-Man/art/lrn-man_20260329_080652.png",
+    "hero_reference": "/home/mike/dev/LRN-Man/art/LRN Man.png",
+    "prompt_focus": "dark neon city, LRN Man scanning anomalous signal bloom, comic-book framing, cyan highlights"
+  },
+  {
+    "scene": 2,
+    "title": "The Bastion Wakes",
+    "purpose": "Show LRN Man inside a command environment reacting to the threat.",
+    "reference_image": "/home/mike/dev/LRN-Man/art/lrn-man_20260329_000943.png",
+    "hero_reference": "/home/mike/dev/LRN-Man/art/LRN Man.png",
+    "prompt_focus": "command center, wall displays, blue armor glow, face visible, mature synthwave mood"
+  },
+  {
+    "scene": 3,
+    "title": "Null Emerges",
+    "purpose": "Visualize the antagonist force as a spreading systems-level corruption.",
+    "reference_image": "/home/mike/dev/LRN-Man/art/lrn-man_20260329_000823.png",
+    "hero_reference": "/home/mike/dev/LRN-Man/art/LRN Man.png",
+    "prompt_focus": "glitch storm, corrupted code tendrils, heavy shadow, enemy presence without losing hero continuity"
+  },
+  {
+    "scene": 4,
+    "title": "Fortress Protocol",
+    "purpose": "Show LRN Man deploying layered defenses across Earth infrastructure.",
+    "reference_image": "/home/mike/dev/LRN-Man/art/lrn-man_20260329_000702.png",
+    "hero_reference": "/home/mike/dev/LRN-Man/art/LRN Man.png",
+    "prompt_focus": "global defense map, segmented armor, cyan interface glyphs, dramatic low angle"
+  },
+  {
+    "scene": 5,
+    "title": "Counterstrike",
+    "purpose": "Heroic action beat where LRN Man turns the attack back on the source.",
+    "reference_image": "/home/mike/dev/LRN-Man/art/lrn-man_20260329_000631.png",
+    "hero_reference": "/home/mike/dev/LRN-Man/art/LRN Man.png",
+    "prompt_focus": "heroic counterattack, digital shockwave, bold outlines, blue/cyan electric contrast"
+  },
+  {
+    "scene": 6,
+    "title": "The Network Holds",
+    "purpose": "Resolve Episode 1 with LRN Man standing over a secured network horizon.",
+    "reference_image": "/home/mike/dev/LRN-Man/art/lrn-man_20260329_074752.png",
+    "hero_reference": "/home/mike/dev/LRN-Man/art/LRN Man.png",
+    "prompt_focus": "widescreen victory frame, secured city grid, synthwave dawn, face visible, cape silhouette"
+  }
+]

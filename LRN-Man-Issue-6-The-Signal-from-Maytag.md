@@ -49,6 +49,19 @@ LRN Man deploys firewall constructs against the Shadow Syndicate. 23 tool icons 
 LRN Man breaks through encrypted chains, freeing servers from the Ransomware Queen.
 > "The Ransomware Queen taught me the hardest lesson: it's about surviving the ones that get through."
 
+**RECAP PANEL 3 -- ISSUE #3: THE BOTNET INVASION**
+LRN Man surrounded by compromised IoT devices under The Hive Mind's control.
+> "The Hive Mind showed me the danger of every connected device."
+
+**RECAP PANEL 4 -- ISSUE #4: THE SOCIAL ENGINEER**
+LRN Man tears away a false reality created by The Phish King.
+> "The Social Engineer proved the most dangerous vulnerability is human trust."
+
+**RECAP PANEL 5 -- ISSUE #5: THE QUANTUM CONSPIRACY**
+LRN Man and Dr. Elara Voss stand against the quantum collapse wave.
+> "The Quantum Conspiracy shattered what I thought I knew about encryption. And it gave me an ally."
+
+> "For thirty years, I've defended Earth's digital infrastructure with tools forged from knowledge. Now a signal has reached me from across the void -- from the homeworld I never knew. The Elders who saved me are still alive. And they need my help. This time, the fight isn't about protecting networks. It's about going home."
 
 ---
 
@@ -93,6 +106,13 @@ LRN Man and Dr. Voss in the Bastion workshop. Equipment laid out.
 LRN Man loads tools into his belt.
 
 > LRN MAN: "Falco for runtime detection. Trivy for vulnerability scanning. These aren't just tools -- on Maytag, these were the fundamental forces of order."
+
+## Scene 3: Entering the Digital Hyperspace
+
+**PANEL 1 -- SPLASH PAGE**
+LRN Man and Dr. Voss step into a quantum bridge -- a tunnel of pure data.
+
+> NARRATION: "The quantum bridge opens. For the first time in thirty years, a son returns to the world that made him."
 
 ---
 
@@ -141,6 +161,9 @@ LRN Man deploys Trivy scanner -- blue scanning beams sweep across corrupted regi
 
 > LRN MAN: "Trivy -- full vulnerability scan on every image in this registry. Show me what's compromised."
 
+> GREEN TECH BOX: **Trivy**
+> *Comprehensive vulnerability scanner that inspects container images, IaC templates, and code dependencies for security flaws. Defends cloud environments against supply chain and static analysis threats.*
+
 > GREEN TECH BOX: **Cosign/Sigstore**
 > *Keyless container image signing and verification framework. Establishes cryptographic proof of image integrity and provenance across the software supply chain.*
 
@@ -177,7 +200,17 @@ LRN Man deploys kube-bench and OPA/Gatekeeper simultaneously.
 **PANEL 3**
 Calico network policies snap into place, segmenting the cluster.
 
-> LRN MAN: "Calico for network policy enforcement. Microsegmentation -- every po
+> LRN MAN: "Calico for network policy enforcement. Microsegmentation -- every pod talks only to what it needs to."
+
+> GREEN TECH BOX: **Calico**
+> *Network policy enforcement and microsegmentation for Kubernetes. Controls pod-to-pod communication with fine-grained security policies.*
+
+**PANEL 4**
+The Orchestrator's staff straightens. Clean YAML flows replace corrupted configs.
+
+> THE ORCHESTRATOR (clearing): "Configuration... restored. The cluster remembers its shape."
+
+---
 
 ## LAYER 4: CLOUD HYDRA -- The Infinite Spawner
 
@@ -380,37 +413,4 @@ Deep in the void beyond Maytag, something stirs. Ancient. Vast. An intelligence 
 **Created by:** Mike Anderson
 **Published by:** Anderson Computer Consulting
 **Series:** LRN Man -- Cybersecurity Superhero
-(c) 2026 Anderson Computer Consulting. All rights reserved.d talks only to what it needs to."
-
-> GREEN TECH BOX: **Calico**
-> *Network policy enforcement and microsegmentation for Kubernetes. Controls pod-to-pod communication with fine-grained security policies.*
-
-**PANEL 4**
-The Orchestrator's staff straightens. Clean YAML flows replace corrupted configs.
-
-> THE ORCHESTRATOR (clearing): "Configuration... restored. The cluster remembers its shape."
-
----
-
-> GREEN TECH BOX: **Trivy**
-> *Comprehensive vulnerability scanner that inspects container images, IaC templates, and code dependencies for security flaws. Defends cloud environments against supply chain and static analysis threats.*
-
-## Scene 3: Entering the Digital Hyperspace
-
-**PANEL 1 -- SPLASH PAGE**
-LRN Man and Dr. Voss step into a quantum bridge -- a tunnel of pure data.
-
-> NARRATION: "The quantum bridge opens. For the first time in thirty years, a son returns to the world that made him."
-**RECAP PANEL 3 -- ISSUE #3: THE BOTNET INVASION**
-LRN Man surrounded by compromised IoT devices under The Hive Mind's control.
-> "The Hive Mind showed me the danger of every connected device."
-
-**RECAP PANEL 4 -- ISSUE #4: THE SOCIAL ENGINEER**
-LRN Man tears away a false reality created by The Phish King.
-> "The Social Engineer proved the most dangerous vulnerability is human trust."
-
-**RECAP PANEL 5 -- ISSUE #5: THE QUANTUM CONSPIRACY**
-LRN Man and Dr. Elara Voss stand against the quantum collapse wave.
-> "The Quantum Conspiracy shattered what I thought I knew about encryption. And it gave me an ally."
-
-> "For thirty years, I've defended Earth's digital infrastructure with tools forged from knowledge. Now a signal has reached me from across the void -- from the homeworld I never knew. The Elders who saved me are still alive. And they need my help. This time, the fight isn't about protecting networks. It's about going home."
+(c) 2026 Anderson Computer Consulting. All rights reserved.

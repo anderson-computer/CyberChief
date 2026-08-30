@@ -1,0 +1,361 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>LRN Man Episode 1 Player</title>
+  <style>
+    :root {
+      --bg: #07101a;
+      --panel: rgba(10, 20, 34, 0.88);
+      --panel-2: rgba(14, 28, 46, 0.92);
+      --line: rgba(111, 210, 255, 0.22);
+      --text: #e8f6ff;
+      --muted: #99b7cc;
+      --accent: #6fd2ff;
+      --accent-2: #ffd77f;
+      --shadow: 0 22px 60px rgba(0,0,0,0.45);
+      --radius: 20px;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "DejaVu Sans", Arial, sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top right, rgba(76, 161, 255, 0.18), transparent 30%),
+        radial-gradient(circle at top left, rgba(111, 210, 255, 0.16), transparent 26%),
+        linear-gradient(180deg, #060b12 0%, #09121c 35%, #05080d 100%);
+      min-height: 100vh;
+    }
+    .shell {
+      width: min(1200px, calc(100vw - 32px));
+      margin: 0 auto;
+      padding: 24px 0 40px;
+    }
+    .hero {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 22px;
+      align-items: stretch;
+      margin-bottom: 22px;
+    }
+    .panel {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      backdrop-filter: blur(12px);
+    }
+    .hero-copy {
+      padding: 28px;
+      position: relative;
+      background:
+        linear-gradient(140deg, rgba(9, 20, 34, 0.95), rgba(12, 23, 38, 0.78)),
+        url('../release/lrn-man-episode1-poster.png') center/cover no-repeat;
+      min-height: 320px;
+    }
+    .hero-copy::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(110deg, rgba(4,9,16,0.92) 20%, rgba(4,9,16,0.62) 56%, rgba(4,9,16,0.78) 100%);
+    }
+    .hero-copy > * { position: relative; z-index: 1; }
+    .kicker {
+      display: inline-flex;
+      padding: 6px 12px;
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 999px;
+      color: var(--accent-2);
+      font-size: 13px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      background: rgba(8, 16, 28, 0.6);
+      margin-bottom: 16px;
+    }
+    h1 {
+      margin: 0 0 12px;
+      font-size: clamp(2rem, 4vw, 3.4rem);
+      line-height: 1;
+    }
+    .subtitle {
+      font-size: clamp(1rem, 1.8vw, 1.2rem);
+      color: var(--muted);
+      max-width: 58ch;
+      line-height: 1.6;
+      margin-bottom: 22px;
+    }
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .btn {
+      appearance: none;
+      border: 0;
+      border-radius: 999px;
+      padding: 12px 18px;
+      min-height: 46px;
+      font-weight: 700;
+      cursor: pointer;
+      text-decoration: none;
+      color: #041019;
+      background: linear-gradient(180deg, #9ce6ff, #63c9ff);
+      box-shadow: 0 12px 24px rgba(0,0,0,0.22);
+    }
+    .btn.secondary {
+      color: var(--text);
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.1);
+      box-shadow: none;
+    }
+    .meta {
+      padding: 24px;
+      display: grid;
+      gap: 14px;
+      background: linear-gradient(180deg, rgba(12, 24, 40, 0.96), rgba(7, 14, 24, 0.96));
+    }
+    .meta-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+    }
+    .stat {
+      padding: 14px;
+      border-radius: 16px;
+      background: var(--panel-2);
+      border: 1px solid rgba(255,255,255,0.06);
+    }
+    .stat label {
+      display: block;
+      color: var(--muted);
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 6px;
+    }
+    .stat strong {
+      display: block;
+      font-size: 1rem;
+    }
+    .layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1.3fr) minmax(320px, 0.7fr);
+      gap: 22px;
+    }
+    .player {
+      padding: 20px;
+    }
+    video {
+      width: 100%;
+      display: block;
+      border-radius: 18px;
+      background: #000;
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+    .section-title {
+      margin: 0 0 14px;
+      font-size: 1rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: var(--accent-2);
+    }
+    .downloads, .manifest, .notes {
+      padding: 20px;
+    }
+    .download-list, .manifest-list {
+      display: grid;
+      gap: 10px;
+    }
+    .download-item, .manifest-item {
+      display: grid;
+      gap: 6px;
+      padding: 14px;
+      border-radius: 16px;
+      background: var(--panel-2);
+      border: 1px solid rgba(255,255,255,0.06);
+    }
+    .download-item a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 700;
+      word-break: break-all;
+    }
+    .manifest-item small, .download-item small, .notes p, .notes li {
+      color: var(--muted);
+      line-height: 1.55;
+    }
+    .manifest-toolbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 12px;
+    }
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 12px;
+      padding: 7px 10px;
+      border-radius: 999px;
+      background: rgba(111, 210, 255, 0.08);
+      border: 1px solid rgba(111, 210, 255, 0.18);
+      color: var(--accent);
+    }
+    .notes ul {
+      padding-left: 18px;
+      margin: 12px 0 0;
+    }
+    .footer {
+      margin-top: 22px;
+      padding: 16px 20px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 14px;
+    }
+    @media (max-width: 920px) {
+      .hero, .layout { grid-template-columns: 1fr; }
+      .meta-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 620px) {
+      .shell { width: min(100vw - 20px, 1200px); padding-top: 14px; }
+      .hero-copy, .meta, .player, .downloads, .manifest, .notes { padding: 16px; }
+      .meta-grid { grid-template-columns: 1fr; }
+      .actions { flex-direction: column; }
+      .btn, .btn.secondary { width: 100%; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <section class="hero">
+      <div class="panel hero-copy">
+        <div class="kicker">Local Episode Player</div>
+        <h1>LRN Man: Defender of the Network</h1>
+        <div class="subtitle">
+          Episode 1 — The Last Son of Maytag. A locally built motion-comic animatic assembled from the LRN-Man art repository, regenerated narration, and a verified scene manifest.
+        </div>
+        <div class="actions">
+          <button class="btn" id="playNow">Play episode</button>
+          <a class="btn secondary" href="../release/lrn-man-episode1-poster.png" download>Download poster</a>
+          <a class="btn secondary" href="../output/lrn-man-episode1-animatic.mp4" download>Download MP4</a>
+        </div>
+      </div>
+      <aside class="panel meta">
+        <h2 class="section-title">Release status</h2>
+        <div class="meta-grid">
+          <div class="stat"><label>Format</label><strong>Motion-comic animatic</strong></div>
+          <div class="stat"><label>Resolution</label><strong>1920 × 1080</strong></div>
+          <div class="stat"><label>Audio</label><strong>Mono AAC + regenerated narration</strong></div>
+          <div class="stat"><label>Artwork</label><strong>Local LRN-Man repo assets</strong></div>
+        </div>
+        <div class="stat">
+          <label>Production note</label>
+          <strong>Null Protocol package prepared for later Hailuo / Runway / Sora generation.</strong>
+        </div>
+        <img src="../release/lrn-man-episode1-thumbnail.png" alt="Episode thumbnail" style="width:100%;border-radius:16px;border:1px solid rgba(255,255,255,0.08)">
+      </aside>
+    </section>
+
+    <section class="layout">
+      <div class="panel player">
+        <h2 class="section-title">Episode player</h2>
+        <video id="episodeVideo" controls preload="metadata" poster="../release/lrn-man-episode1-poster.png">
+          <source src="../output/lrn-man-episode1-animatic.mp4" type="video/mp4">
+          <track src="../output/lrn-man-episode1-animatic.srt" kind="subtitles" srclang="en" label="English">
+        </video>
+      </div>
+
+      <div style="display:grid;gap:22px;align-content:start;">
+        <section class="panel downloads">
+          <h2 class="section-title">Downloads</h2>
+          <div class="download-list">
+            <div class="download-item">
+              <a href="../output/lrn-man-episode1-animatic.mp4" download>Final episode MP4</a>
+              <small>/home/mike/dev/LRN-Man/episode-build/output/lrn-man-episode1-animatic.mp4</small>
+            </div>
+            <div class="download-item">
+              <a href="../output/lrn-man-episode1-animatic.srt" download>Subtitle file</a>
+              <small>/home/mike/dev/LRN-Man/episode-build/output/lrn-man-episode1-animatic.srt</small>
+            </div>
+            <div class="download-item">
+              <a href="../release/lrn-man-episode1-poster.png" download>Release poster</a>
+              <small>/home/mike/dev/LRN-Man/episode-build/release/lrn-man-episode1-poster.png</small>
+            </div>
+            <div class="download-item">
+              <a href="../release/lrn-man-episode1-thumbnail.png" download>Thumbnail</a>
+              <small>/home/mike/dev/LRN-Man/episode-build/release/lrn-man-episode1-thumbnail.png</small>
+            </div>
+          </div>
+        </section>
+
+        <section class="panel notes">
+          <h2 class="section-title">Build notes</h2>
+          <p>
+            This player is a local utility page inside the repo. It is meant for immediate review on this machine and can be served over loopback with a tiny static server.
+          </p>
+          <ul>
+            <li>Episode cut uses regenerated narration timing.</li>
+            <li>Poster and thumbnail were rendered locally from repo art.</li>
+            <li>Scene list below is loaded live from the JSON manifest.</li>
+          </ul>
+        </section>
+      </div>
+    </section>
+
+    <section class="panel manifest" style="margin-top:22px;">
+      <div class="manifest-toolbar">
+        <h2 class="section-title" style="margin:0;">Scene manifest</h2>
+        <div class="pill" id="manifestSummary">Loading manifest…</div>
+      </div>
+      <div class="manifest-list" id="manifestList"></div>
+    </section>
+
+    <div class="footer">
+      Built locally in /home/mike/dev/LRN-Man/episode-build/web
+    </div>
+  </div>
+
+  <script>
+    const video = document.getElementById('episodeVideo');
+    const playNow = document.getElementById('playNow');
+    const manifestList = document.getElementById('manifestList');
+    const manifestSummary = document.getElementById('manifestSummary');
+
+    playNow.addEventListener('click', () => {
+      video.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      video.play().catch(() => {});
+    });
+
+    const fmt = (seconds) => {
+      const total = Math.round(Number(seconds || 0));
+      const m = Math.floor(total / 60);
+      const s = total % 60;
+      return `${m}:${String(s).padStart(2, '0')}`;
+    };
+
+    fetch('../output/scene_manifest.json')
+      .then(r => {
+        if (!r.ok) throw new Error(`HTTP ${r.status}`);
+        return r.json();
+      })
+      .then(data => {
+        manifestSummary.textContent = `${data.length} scenes • ${fmt(data.at(-1)?.end || 0)} total runtime`;
+        manifestList.innerHTML = data.map(scene => `
+          <article class="manifest-item">
+            <strong>${scene.index}. ${scene.label}</strong>
+            <small>${scene.sub}</small>
+            <small>${fmt(scene.start)} → ${fmt(scene.end)} • ${scene.kind}</small>
+          </article>
+        `).join('');
+      })
+      .catch(err => {
+        manifestSummary.textContent = 'Manifest unavailable';
+        manifestList.innerHTML = `<article class="manifest-item"><strong>Could not load scene manifest</strong><small>${String(err.message || err)}</small></article>`;
+      });
+  </script>
+</body>
+</html>

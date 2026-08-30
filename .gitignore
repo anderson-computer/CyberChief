@@ -1,0 +1,11 @@
+build/
+*.tmp
+*.log
+__pycache__/
+*.pyc
+
+# Episode video build artifacts are large/generated; keep source prompts/scripts only.
+episode-build/output/
+episode-build/assets/
+episode-build/release/*.png
+episode-build/release/*.ass
