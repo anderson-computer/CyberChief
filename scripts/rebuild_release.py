@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
-"""Rebuild LRN Man portable release artifacts.
+"""Rebuild CyberChief portable release artifacts.
 
 Creates:
-- issues/issue-06.html from LRN-Man-Issue-6-The-Signal-from-Maytag.md
-- pdfs/lrn-man-issue-06.pdf via Chrome headless when available
-- dist/output/lrn-man-comic-email.zip
-- dist/output/lrn-man-comic-full.zip
-- dist/output/lrn-man-dvd.iso
+- issues/issue-06.html from CyberChief-Issue-6-The-Signal-from-Maytag.md
+- pdfs/cyberchief-issue-06.pdf via Chrome headless when available
+- dist/output/cyberchief-comic-email.zip
+- dist/output/cyberchief-comic-full.zip
+- dist/output/cyberchief-dvd.iso
 """
 from __future__ import annotations
 
@@ -24,9 +24,9 @@ ROOT = Path(__file__).resolve().parents[1]
 DIST = ROOT / "dist"
 OUT = DIST / "output"
 STAGING = ROOT / "build" / "release-staging"
-ISSUE6_MD = ROOT / "LRN-Man-Issue-6-The-Signal-from-Maytag.md"
+ISSUE6_MD = ROOT / "CyberChief-Issue-6-The-Signal-from-Maytag.md"
 ISSUE6_HTML = ROOT / "issues" / "issue-06.html"
-ISSUE6_PDF = ROOT / "pdfs" / "lrn-man-issue-06.pdf"
+ISSUE6_PDF = ROOT / "pdfs" / "cyberchief-issue-06.pdf"
 
 
 def run(cmd: list[str], **kwargs) -> subprocess.CompletedProcess[str]:
@@ -120,7 +120,7 @@ def md_to_issue_html(md: str) -> str:
             q = line.lstrip("> ").strip()
             cls = "narration"
             upper = q.upper()
-            if upper.startswith("LRN MAN:"):
+            if upper.startswith("CYBERCHIEF:"):
                 cls = "lrn"
             elif "GREEN TECH BOX" in upper:
                 cls = "tech"
@@ -146,7 +146,7 @@ def md_to_issue_html(md: str) -> str:
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>LRN Man #6 — The Signal from Maytag | Mike Anderson</title>
+<title>CyberChief #6 — The Signal from Maytag | Mike Anderson</title>
 <link rel="stylesheet" href="comic.css">
 <style>
 .issue-list {{ margin: 1rem 2rem; line-height: 1.7; }}
@@ -162,7 +162,7 @@ def md_to_issue_html(md: str) -> str:
   <a href="index.html">ALL ISSUES ▶</a>
 </nav>
 <div class="cover-spread" style="padding:48px 24px;text-align:center;background:radial-gradient(circle at 50% 20%,#113a7a,#080810 65%);">
-  <img src="../art/LRN Man Logo.png" alt="LRN Man Logo" style="max-width:300px;filter:drop-shadow(0 0 24px rgba(77,195,255,.7));">
+  <img src="../art/CyberChief Logo.png" alt="CyberChief Logo" style="max-width:300px;filter:drop-shadow(0 0 24px rgba(77,195,255,.7));">
   <div style="font-family:'Bangers',Impact,fantasy;font-size:3rem;letter-spacing:6px;color:var(--caption-yellow);margin-top:24px;">THE SIGNAL FROM MAYTAG</div>
   <div style="font-family:'Bangers',Impact,fantasy;font-size:1.4rem;letter-spacing:3px;color:var(--blue-glow);">CONTAINERS OF CHAOS</div>
   <div style="margin-top:18px;color:#aab;">Issue #6 · Cloud &amp; Container Security · 10 New Tools · 65 Total</div>
@@ -216,12 +216,12 @@ def stage_release() -> None:
     copytree(ROOT / "pdfs", STAGING / "pdfs")
     copytree(DIST / "Windows", STAGING / "Windows")
     copytree(DIST / "Linux", STAGING / "Linux")
-    for name in ["README.txt", "autorun.inf", "LAUNCH.bat", "launch.sh", "lrn-man-cd-label.html"]:
+    for name in ["README.txt", "autorun.inf", "LAUNCH.bat", "launch.sh", "cyberchief-cd-label.html"]:
         src = DIST / name
         if src.exists():
             shutil.copy2(src, STAGING / name)
     # keep launch.sh executable in staged output
-    for rel in ["launch.sh", "Linux/launch-lrn-man.sh", "Linux/install-lrn-man.sh"]:
+    for rel in ["launch.sh", "Linux/launch-cyberchief.sh", "Linux/install-cyberchief.sh"]:
         p = STAGING / rel
         if p.exists():
             p.chmod(p.stat().st_mode | 0o111)
@@ -243,7 +243,7 @@ def make_zip(zip_path: Path, include_pdfs: bool) -> None:
 
 
 def make_iso() -> None:
-    iso = OUT / "lrn-man-dvd.iso"
+    iso = OUT / "cyberchief-dvd.iso"
     if iso.exists():
         iso.unlink()
     cmd = [
@@ -252,7 +252,7 @@ def make_iso() -> None:
         "-J",
         "-r",
         "-V",
-        "LRN-MAN",
+        "CYBERCHIEF",
         "-o",
         str(iso),
         str(STAGING),
@@ -266,8 +266,8 @@ def main() -> int:
     generate_issue6()
     chrome_pdf()
     stage_release()
-    make_zip(OUT / "lrn-man-comic-email.zip", include_pdfs=False)
-    make_zip(OUT / "lrn-man-comic-full.zip", include_pdfs=True)
+    make_zip(OUT / "cyberchief-comic-email.zip", include_pdfs=False)
+    make_zip(OUT / "cyberchief-comic-full.zip", include_pdfs=True)
     make_iso()
     return 0
 

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Static QA checks for LRN Man release content."""
+"""Static QA checks for CyberChief release content."""
 from __future__ import annotations
 
 import re
@@ -17,14 +17,14 @@ REQUIRED = [
     "issues/issue-05.html",
     "issues/issue-06.html",
     "issues/comic.css",
-    "dist/Windows/Launch-LRN-Man.bat",
-    "dist/Windows/Install-LRN-Man.bat",
-    "dist/Linux/launch-lrn-man.sh",
-    "dist/Linux/install-lrn-man.sh",
+    "dist/Windows/Launch-CyberChief.bat",
+    "dist/Windows/Install-CyberChief.bat",
+    "dist/Linux/launch-cyberchief.sh",
+    "dist/Linux/install-cyberchief.sh",
     "dist/README.txt",
-    "dist/output/lrn-man-comic-email.zip",
-    "dist/output/lrn-man-comic-full.zip",
-    "dist/output/lrn-man-dvd.iso",
+    "dist/output/cyberchief-comic-email.zip",
+    "dist/output/cyberchief-comic-full.zip",
+    "dist/output/cyberchief-dvd.iso",
 ]
 
 
@@ -66,8 +66,8 @@ def check_index() -> None:
 
 
 def check_release_zips() -> None:
-    expected = ["issues/index.html", "issues/issue-06.html", "Windows/Launch-LRN-Man.bat", "Linux/launch-lrn-man.sh", "README.txt"]
-    for name in ["lrn-man-comic-email.zip", "lrn-man-comic-full.zip"]:
+    expected = ["issues/index.html", "issues/issue-06.html", "Windows/Launch-CyberChief.bat", "Linux/launch-cyberchief.sh", "README.txt"]
+    for name in ["cyberchief-comic-email.zip", "cyberchief-comic-full.zip"]:
         zp = ROOT / "dist" / "output" / name
         if not zipfile.is_zipfile(zp):
             fail(f"{name} is not a valid zip")
@@ -76,7 +76,7 @@ def check_release_zips() -> None:
             missing = [e for e in expected if e not in names]
             if missing:
                 fail(f"{name} missing {missing}")
-            if name.endswith("full.zip") and "pdfs/lrn-man-issue-06.pdf" not in names:
+            if name.endswith("full.zip") and "pdfs/cyberchief-issue-06.pdf" not in names:
                 fail("full zip missing issue 6 PDF")
 
 
@@ -96,7 +96,7 @@ def main() -> int:
     check_html_refs()
     check_index()
     check_release_zips()
-    print("LRN Man release validation passed")
+    print("CyberChief release validation passed")
     return 0
 
 

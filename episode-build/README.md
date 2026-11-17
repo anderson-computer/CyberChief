@@ -1,6 +1,6 @@
-# LRN Man Episode Build Workspace
+# CyberChief Episode Build Workspace
 
-This directory is an experimental video/animatic workstream for LRN Man Episode 1. It is intentionally separated from the main portable comic release.
+This directory is an experimental video/animatic workstream for CyberChief Episode 1. It is intentionally separated from the main portable comic release.
 
 Tracked source/control files:
 

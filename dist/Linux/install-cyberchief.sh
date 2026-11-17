@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # ============================================================
-# LRN Man: Defender of the Network
+# CyberChief: Defender of the Network
 # Linux Installer
 # Created by Mike Anderson
 # ============================================================
@@ -11,11 +11,11 @@ SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 SRC_DIR="$(cd "$SCRIPT_DIR/.." && pwd)"
 
 # Default install location
-INSTALL_DIR="$HOME/LRN-Man"
+INSTALL_DIR="$HOME/CyberChief"
 
 echo ""
 echo " ====================================================="
-echo "  LRN MAN: DEFENDER OF THE NETWORK"
+echo "  CYBERCHIEF: DEFENDER OF THE NETWORK"
 echo "  Linux Installer — Created by Mike Anderson"
 echo " ====================================================="
 echo ""
@@ -38,7 +38,7 @@ echo " Copying artwork..."
 cp -r "$SRC_DIR/art/"* "$INSTALL_DIR/art/"
 
 # Create launcher script
-cat > "$INSTALL_DIR/lrn-man" << 'LAUNCHER'
+cat > "$INSTALL_DIR/cyberchief" << 'LAUNCHER'
 #!/usr/bin/env bash
 DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 INDEX="$DIR/issues/index.html"
@@ -54,12 +54,12 @@ else
     echo "Open this file in your browser: $INDEX"
 fi
 LAUNCHER
-chmod +x "$INSTALL_DIR/lrn-man"
+chmod +x "$INSTALL_DIR/cyberchief"
 
 # Symlink to ~/bin if it exists
 if [ -d "$HOME/bin" ]; then
-    ln -sf "$INSTALL_DIR/lrn-man" "$HOME/bin/lrn-man"
-    echo " Launcher linked: ~/bin/lrn-man"
+    ln -sf "$INSTALL_DIR/cyberchief" "$HOME/bin/cyberchief"
+    echo " Launcher linked: ~/bin/cyberchief"
 fi
 
 # Create .desktop file (GNOME/KDE/etc. app menu)
@@ -67,25 +67,25 @@ DESKTOP_DIR="$HOME/.local/share/applications"
 mkdir -p "$DESKTOP_DIR"
 
 # Find icon
-ICON="$INSTALL_DIR/art/LRN Man Logo.png"
+ICON="$INSTALL_DIR/art/CyberChief Logo.png"
 [ ! -f "$ICON" ] && ICON="application-x-executable"
 
-cat > "$DESKTOP_DIR/lrn-man.desktop" << DESKTOP
+cat > "$DESKTOP_DIR/cyberchief.desktop" << DESKTOP
 [Desktop Entry]
 Version=1.0
 Type=Application
-Name=LRN Man: Defender of the Network
+Name=CyberChief: Defender of the Network
 GenericName=Comic Series
-Comment=LRN Man cybersecurity comic series by Mike Anderson
-Exec=bash "$INSTALL_DIR/lrn-man"
+Comment=CyberChief cybersecurity comic series by Mike Anderson
+Exec=bash "$INSTALL_DIR/cyberchief"
 Icon=$ICON
 Terminal=false
 Categories=Education;Comics;
-Keywords=lrnman;comic;cybersecurity;network;
+Keywords=cyberchief;comic;cybersecurity;network;
 StartupNotify=true
 DESKTOP
 
-chmod +x "$DESKTOP_DIR/lrn-man.desktop"
+chmod +x "$DESKTOP_DIR/cyberchief.desktop"
 
 # Refresh app database if available
 if command -v update-desktop-database &>/dev/null; then
@@ -95,11 +95,11 @@ fi
 # Create uninstaller
 cat > "$INSTALL_DIR/uninstall.sh" << UNINSTALL
 #!/usr/bin/env bash
-echo "Uninstalling LRN Man: Defender of the Network..."
+echo "Uninstalling CyberChief: Defender of the Network..."
 read -r -p "Are you sure? This deletes all files. [y/N]: " CONFIRM
 if [[ "\$CONFIRM" =~ ^[Yy]\$ ]]; then
-    rm -f "$HOME/.local/share/applications/lrn-man.desktop"
-    rm -f "$HOME/bin/lrn-man"
+    rm -f "$HOME/.local/share/applications/cyberchief.desktop"
+    rm -f "$HOME/bin/cyberchief"
     rm -rf "$INSTALL_DIR"
     echo "Uninstall complete."
 else
@@ -114,11 +114,11 @@ echo "  Installation Complete!"
 echo " ====================================================="
 echo ""
 echo "  Location  : $INSTALL_DIR"
-echo "  App Menu  : LRN Man: Defender of the Network"
-echo "  Command   : lrn-man  (if ~/bin is in your PATH)"
+echo "  App Menu  : CyberChief: Defender of the Network"
+echo "  Command   : cyberchief  (if ~/bin is in your PATH)"
 echo "  Uninstall : $INSTALL_DIR/uninstall.sh"
 echo ""
-echo " Opening LRN Man now..."
+echo " Opening CyberChief now..."
 echo ""
 
-bash "$INSTALL_DIR/lrn-man"
+bash "$INSTALL_DIR/cyberchief"

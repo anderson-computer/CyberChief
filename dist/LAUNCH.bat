@@ -1,5 +1,5 @@
 @echo off
-:: LRN Man - Defender of the Network
+:: CyberChief - Defender of the Network
 :: DVD Auto-Launcher for Windows
 :: Opens the comic series in your default browser from disc
 

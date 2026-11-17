@@ -1,6 +1,6 @@
-# LRN-Man
+# CyberChief
 
-The LRN Man Universe — comics, lore, assets, printable/downloadable releases, and animated short experiments.
+The CyberChief Universe — comics, lore, assets, printable/downloadable releases, and animated short experiments.
 
 ## Current release status
 
@@ -21,10 +21,10 @@ The portable comic release currently contains:
 xdg-open issues/index.html
 
 # Linux portable launcher
-bash dist/Linux/launch-lrn-man.sh
+bash dist/Linux/launch-cyberchief.sh
 
 # Windows portable launcher
-# Double-click: dist\Windows\Launch-LRN-Man.bat
+# Double-click: dist\Windows\Launch-CyberChief.bat
 ```
 
 ## Rebuild release artifacts

@@ -1,5 +1,5 @@
 @echo off
-:: LRN Man - Defender of the Network
+:: CyberChief - Defender of the Network
 :: Portable launcher - run directly from the zip/folder without installing
 
 set "HERE=%~dp0"

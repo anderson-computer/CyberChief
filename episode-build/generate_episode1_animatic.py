@@ -3,7 +3,7 @@ from pathlib import Path
 import json
 import subprocess
 
-BASE = Path('/home/mike/dev/LRN-Man')
+BASE = Path('/home/mike/dev/CyberChief')
 BUILD = BASE / 'episode-build'
 OUT = BUILD / 'output'
 CLIPS = OUT / 'clips'
@@ -15,27 +15,27 @@ NARRATION_CANDIDATES = [
     OUT / 'lrn-episode1-narration.mp3',
 ]
 NARRATION = next((p for p in NARRATION_CANDIDATES if p.exists()), None)
-FINAL = OUT / 'lrn-man-episode1-animatic.mp4'
-PREMUX = OUT / 'lrn-man-episode1-animatic-premux.mp4'
-SRT = OUT / 'lrn-man-episode1-animatic.srt'
-ASS = OUT / 'lrn-man-episode1-animatic.ass'
+FINAL = OUT / 'cyberchief-episode1-animatic.mp4'
+PREMUX = OUT / 'cyberchief-episode1-animatic-premux.mp4'
+SRT = OUT / 'cyberchief-episode1-animatic.srt'
+ASS = OUT / 'cyberchief-episode1-animatic.ass'
 MANIFEST = OUT / 'scene_manifest.json'
 
 scenes = [
-    {'kind': 'intro', 'image': str(BASE / 'art/LRN Man Logo=blk background.png'), 'duration': 5.0, 'label': 'LRN MAN: DEFENDER OF THE NETWORK', 'sub': 'Episode 1 — The Last Son of Maytag'},
-    {'kind': 'scene', 'image': str(BASE / 'art/lrn-man_20260328_202415.png'), 'duration': 7.5, 'label': 'PLANET MAYTAG — THE COUNCIL OF ROOT ADMINS', 'sub': 'A perfect digital civilization sees Earth standing exposed.'},
-    {'kind': 'scene', 'image': str(BASE / 'art/lrn-man_20260328_202411.png'), 'duration': 7.5, 'label': 'THE LAST DEPARTURE', 'sub': 'LRN accepts the mission and launches from Maytag.'},
-    {'kind': 'scene', 'image': str(BASE / 'art/lrn-man_20260328_202146.png'), 'duration': 7.5, 'label': 'FIRST BOOT COMPLETE', 'sub': 'LRN Man arrives on Earth and begins his scan.'},
-    {'kind': 'scene', 'image': str(BASE / 'art/lrn-man_20260328_202348.png'), 'duration': 7.5, 'label': 'THREATS DETECTED', 'sub': 'He finds a planet drowning in exposed systems and weak defenses.'},
-    {'kind': 'scene', 'image': str(BASE / 'art/lrn-man_20260328_202656.png'), 'duration': 7.5, 'label': 'THE MISSION BEGINS', 'sub': 'Earth becomes the site of the greatest infrastructure project in history.'},
-    {'kind': 'scene', 'image': str(BASE / 'art/lrn-man_20260328_202352.png'), 'duration': 7.5, 'label': 'IDENTITY AND TRUST', 'sub': 'FreeIPA, Kerberos, LDAP, and SSSD form the network backbone.'},
-    {'kind': 'scene', 'image': str(BASE / 'art/lrn-man_20260328_202356.png'), 'duration': 7.5, 'label': 'ENCRYPTION LAYERS ACTIVE', 'sub': 'DogTag, TLS, and AIDE seal the foundation with cryptographic proof.'},
-    {'kind': 'scene', 'image': str(BASE / 'art/lrn-man_20260328_202401.png'), 'duration': 7.5, 'label': 'THE WATCHTOWERS RISE', 'sub': 'SELinux, Splunk, Wazuh, and CyberArk give the fortress eyes.'},
-    {'kind': 'scene', 'image': str(BASE / 'art/lrn-man_20260328_202422.png'), 'duration': 7.5, 'label': 'AUTOMATION ONLINE', 'sub': 'GitLab, CMMD, and SBAI turn security into a living system.'},
-    {'kind': 'scene', 'image': str(BASE / 'art/lrn-man_20260328_202425.png'), 'duration': 7.5, 'label': 'THE SHADOW SYNDICATE MOBILIZES', 'sub': 'The Zero-Day King gathers every attack vector for one massive strike.'},
-    {'kind': 'scene', 'image': str(BASE / 'art/lrn-man_20260328_202418.png'), 'duration': 7.5, 'label': 'COUNTERATTACK', 'sub': 'DDoS traffic is scrubbed. Zero-days are contained. Keys are rotated.'},
-    {'kind': 'scene', 'image': str(BASE / 'art/lrn-man_20260328_202352.png'), 'duration': 7.5, 'label': 'THE NETWORK STANDS', 'sub': 'Honeypots bloom and command channels collapse across the battlefield.'},
-    {'kind': 'outro', 'image': str(BASE / 'art/LRN Man.png'), 'duration': 6.0, 'label': 'HE IS LRN MAN', 'sub': 'This is his network. And he defends it.'},
+    {'kind': 'intro', 'image': str(BASE / 'art/CyberChief Logo=blk background.png'), 'duration': 5.0, 'label': 'CYBERCHIEF: DEFENDER OF THE NETWORK', 'sub': 'Episode 1 — The Last Son of Maytag'},
+    {'kind': 'scene', 'image': str(BASE / 'art/cyberchief_20260328_202415.png'), 'duration': 7.5, 'label': 'PLANET MAYTAG — THE COUNCIL OF ROOT ADMINS', 'sub': 'A perfect digital civilization sees Earth standing exposed.'},
+    {'kind': 'scene', 'image': str(BASE / 'art/cyberchief_20260328_202411.png'), 'duration': 7.5, 'label': 'THE LAST DEPARTURE', 'sub': 'LRN accepts the mission and launches from Maytag.'},
+    {'kind': 'scene', 'image': str(BASE / 'art/cyberchief_20260328_202146.png'), 'duration': 7.5, 'label': 'FIRST BOOT COMPLETE', 'sub': 'CyberChief arrives on Earth and begins his scan.'},
+    {'kind': 'scene', 'image': str(BASE / 'art/cyberchief_20260328_202348.png'), 'duration': 7.5, 'label': 'THREATS DETECTED', 'sub': 'He finds a planet drowning in exposed systems and weak defenses.'},
+    {'kind': 'scene', 'image': str(BASE / 'art/cyberchief_20260328_202656.png'), 'duration': 7.5, 'label': 'THE MISSION BEGINS', 'sub': 'Earth becomes the site of the greatest infrastructure project in history.'},
+    {'kind': 'scene', 'image': str(BASE / 'art/cyberchief_20260328_202352.png'), 'duration': 7.5, 'label': 'IDENTITY AND TRUST', 'sub': 'FreeIPA, Kerberos, LDAP, and SSSD form the network backbone.'},
+    {'kind': 'scene', 'image': str(BASE / 'art/cyberchief_20260328_202356.png'), 'duration': 7.5, 'label': 'ENCRYPTION LAYERS ACTIVE', 'sub': 'DogTag, TLS, and AIDE seal the foundation with cryptographic proof.'},
+    {'kind': 'scene', 'image': str(BASE / 'art/cyberchief_20260328_202401.png'), 'duration': 7.5, 'label': 'THE WATCHTOWERS RISE', 'sub': 'SELinux, Splunk, Wazuh, and CyberArk give the fortress eyes.'},
+    {'kind': 'scene', 'image': str(BASE / 'art/cyberchief_20260328_202422.png'), 'duration': 7.5, 'label': 'AUTOMATION ONLINE', 'sub': 'GitLab, CMMD, and SBAI turn security into a living system.'},
+    {'kind': 'scene', 'image': str(BASE / 'art/cyberchief_20260328_202425.png'), 'duration': 7.5, 'label': 'THE SHADOW SYNDICATE MOBILIZES', 'sub': 'The Zero-Day King gathers every attack vector for one massive strike.'},
+    {'kind': 'scene', 'image': str(BASE / 'art/cyberchief_20260328_202418.png'), 'duration': 7.5, 'label': 'COUNTERATTACK', 'sub': 'DDoS traffic is scrubbed. Zero-days are contained. Keys are rotated.'},
+    {'kind': 'scene', 'image': str(BASE / 'art/cyberchief_20260328_202352.png'), 'duration': 7.5, 'label': 'THE NETWORK STANDS', 'sub': 'Honeypots bloom and command channels collapse across the battlefield.'},
+    {'kind': 'outro', 'image': str(BASE / 'art/CyberChief.png'), 'duration': 6.0, 'label': 'HE IS CYBERCHIEF', 'sub': 'This is his network. And he defends it.'},
 ]
 
 

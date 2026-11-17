@@ -1,4 +1,4 @@
-# LRN Man Episode 1 Web Player
+# CyberChief Episode 1 Web Player
 
 Local browser player for the rebuilt Episode 1 animatic.
 

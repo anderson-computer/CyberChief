@@ -1,8 +1,8 @@
 [AutoRun]
 open=LAUNCH.bat
-icon=art\lrn-man.ico
-label=LRN Man - Defender of the Network
-action=Read LRN Man: Defender of the Network
+icon=art\cyberchief.ico
+label=CyberChief - Defender of the Network
+action=Read CyberChief: Defender of the Network
 
 [Content]
 MusicFiles=false

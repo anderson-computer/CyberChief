@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# LRN Man - Defender of the Network
+# CyberChief - Defender of the Network
 # Portable launcher — run directly from the extracted folder
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"

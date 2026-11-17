@@ -1,4 +1,4 @@
-LRN Man: Defender of the Network. Episode One. The Last Son of Maytag.
+CyberChief: Defender of the Network. Episode One. The Last Son of Maytag.
 
 On the distant world of Maytag, the age of perfect systems is ending. The Council of Root Admins looks across the stars and sees the next battlefield: Earth. Fragmented. Exposed. Vulnerable by design.
 
@@ -24,13 +24,13 @@ The Zero-Day King gathers every vector he can command and hurls the dark at Eart
 
 DDoS floods. Zero-day exploits. Credential theft. Ransomware. Command-and-control channels hidden in the noise.
 
-LRN Man does not break.
+CyberChief does not break.
 
 Traffic is scrubbed. Exploits are contained. Credentials are rotated. Certificates are revoked and reissued before the enemy can breathe.
 
 Honeypots bloom. C2 infrastructure collapses. Ransomware is rebuilt out of existence.
 
-Because LRN Man is not defending a single machine.
+Because CyberChief is not defending a single machine.
 
 He is defending an architecture.
 
@@ -38,6 +38,6 @@ And when the battle is over, Earth is no longer standing alone.
 
 Somewhere beneath the city, a guardian from another world keeps watch over every packet, every process, every login, every trust boundary.
 
-He is LRN Man.
+He is CyberChief.
 
 And this is his network.

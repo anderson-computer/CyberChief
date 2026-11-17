@@ -1,25 +1,25 @@
 @echo off
 :: ============================================================
-:: LRN Man: Defender of the Network
+:: CyberChief: Defender of the Network
 :: Windows Installer
 :: Created by Mike Anderson
 :: ============================================================
 
 setlocal enabledelayedexpansion
-title LRN Man Installer
+title CyberChief Installer
 
 echo.
 echo  =====================================================
-echo   LRN MAN: DEFENDER OF THE NETWORK
+echo   CYBERCHIEF: DEFENDER OF THE NETWORK
 echo   Windows Installer
 echo   Created by Mike Anderson
 echo  =====================================================
 echo.
-echo  This will install LRN Man Comic Series on your computer.
+echo  This will install CyberChief Comic Series on your computer.
 echo.
 
 :: Default install location
-set "INSTALL_DIR=%USERPROFILE%\LRN Man - Defender of the Network"
+set "INSTALL_DIR=%USERPROFILE%\CyberChief - Defender of the Network"
 
 echo  Install location:
 echo  %INSTALL_DIR%
@@ -46,8 +46,8 @@ echo  Copying artwork...
 xcopy /E /Y /Q "%SRC%\art\*" "%INSTALL_DIR%\art\" >nul 2>&1
 
 :: Create launcher in install dir
-echo @echo off > "%INSTALL_DIR%\LRN Man.bat"
-echo start "" "%INSTALL_DIR%\issues\index.html" >> "%INSTALL_DIR%\LRN Man.bat"
+echo @echo off > "%INSTALL_DIR%\CyberChief.bat"
+echo start "" "%INSTALL_DIR%\issues\index.html" >> "%INSTALL_DIR%\CyberChief.bat"
 
 :: Create VBScript launcher (no terminal window)
 (
@@ -60,51 +60,51 @@ echo Set WshShell = Nothing
 echo  Creating Desktop shortcut...
 powershell -NoProfile -ExecutionPolicy Bypass -Command ^
     "$ws = New-Object -ComObject WScript.Shell; ^
-     $s = $ws.CreateShortcut('%USERPROFILE%\Desktop\LRN Man - Defender of the Network.lnk'); ^
+     $s = $ws.CreateShortcut('%USERPROFILE%\Desktop\CyberChief - Defender of the Network.lnk'); ^
      $s.TargetPath = '%INSTALL_DIR%\issues\index.html'; ^
-     $s.IconLocation = '%INSTALL_DIR%\art\lrn-man.ico'; ^
-     $s.Description = 'LRN Man: Defender of the Network - Comic Series by Mike Anderson'; ^
+     $s.IconLocation = '%INSTALL_DIR%\art\cyberchief.ico'; ^
+     $s.Description = 'CyberChief: Defender of the Network - Comic Series by Mike Anderson'; ^
      $s.WorkingDirectory = '%INSTALL_DIR%\issues'; ^
      $s.Save()" >nul 2>&1
 
 :: Create Start Menu shortcut
 set "STARTMENU=%APPDATA%\Microsoft\Windows\Start Menu\Programs"
-if not exist "%STARTMENU%\LRN Man" mkdir "%STARTMENU%\LRN Man"
+if not exist "%STARTMENU%\CyberChief" mkdir "%STARTMENU%\CyberChief"
 
 powershell -NoProfile -ExecutionPolicy Bypass -Command ^
     "$ws = New-Object -ComObject WScript.Shell; ^
-     $s = $ws.CreateShortcut('%STARTMENU%\LRN Man\LRN Man - Defender of the Network.lnk'); ^
+     $s = $ws.CreateShortcut('%STARTMENU%\CyberChief\CyberChief - Defender of the Network.lnk'); ^
      $s.TargetPath = '%INSTALL_DIR%\issues\index.html'; ^
-     $s.IconLocation = '%INSTALL_DIR%\art\lrn-man.ico'; ^
-     $s.Description = 'LRN Man: Defender of the Network'; ^
+     $s.IconLocation = '%INSTALL_DIR%\art\cyberchief.ico'; ^
+     $s.Description = 'CyberChief: Defender of the Network'; ^
      $s.WorkingDirectory = '%INSTALL_DIR%\issues'; ^
      $s.Save()" >nul 2>&1
 
 powershell -NoProfile -ExecutionPolicy Bypass -Command ^
     "$ws = New-Object -ComObject WScript.Shell; ^
-     $s = $ws.CreateShortcut('%STARTMENU%\LRN Man\Uninstall LRN Man.lnk'); ^
-     $s.TargetPath = '%INSTALL_DIR%\Windows\Uninstall-LRN-Man.bat'; ^
-     $s.Description = 'Uninstall LRN Man'; ^
+     $s = $ws.CreateShortcut('%STARTMENU%\CyberChief\Uninstall CyberChief.lnk'); ^
+     $s.TargetPath = '%INSTALL_DIR%\Windows\Uninstall-CyberChief.bat'; ^
+     $s.Description = 'Uninstall CyberChief'; ^
      $s.Save()" >nul 2>&1
 
 :: Create uninstaller
 (
 echo @echo off
-echo title LRN Man Uninstaller
+echo title CyberChief Uninstaller
 echo echo.
-echo echo  Uninstalling LRN Man: Defender of the Network...
+echo echo  Uninstalling CyberChief: Defender of the Network...
 echo echo.
 echo set /p CONFIRM="  Are you sure? This will delete all files. [Y/N]: "
 echo if /i "%%CONFIRM%%"=="Y" (
-echo     del "%USERPROFILE%\Desktop\LRN Man - Defender of the Network.lnk" 2^>nul
-echo     rmdir /S /Q "%STARTMENU%\LRN Man" 2^>nul
+echo     del "%USERPROFILE%\Desktop\CyberChief - Defender of the Network.lnk" 2^>nul
+echo     rmdir /S /Q "%STARTMENU%\CyberChief" 2^>nul
 echo     rmdir /S /Q "%INSTALL_DIR%" 2^>nul
 echo     echo   Uninstall complete.
 echo ^) else (
 echo     echo   Uninstall cancelled.
 echo ^)
 echo pause
-) > "%INSTALL_DIR%\Windows\Uninstall-LRN-Man.bat"
+) > "%INSTALL_DIR%\Windows\Uninstall-CyberChief.bat"
 
 echo.
 echo  =====================================================
@@ -112,10 +112,10 @@ echo   Installation Complete!
 echo  =====================================================
 echo.
 echo   Location : %INSTALL_DIR%
-echo   Desktop  : LRN Man - Defender of the Network
-echo   Start    : Start Menu ^> LRN Man
+echo   Desktop  : CyberChief - Defender of the Network
+echo   Start    : Start Menu ^> CyberChief
 echo.
-echo  Opening LRN Man now...
+echo  Opening CyberChief now...
 echo.
 
 start "" "%INSTALL_DIR%\issues\index.html"

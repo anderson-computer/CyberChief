@@ -16,7 +16,7 @@ Lighting and tone
 - [ ] Comic-book outlines preserved
 
 Cinematography
-- [ ] Favor low-angle heroic frames for LRN Man
+- [ ] Favor low-angle heroic frames for CyberChief
 - [ ] Use controlled camera movement, not frantic motion
 - [ ] Keep threat scenes darker and more contrast-heavy than build scenes
 - [ ] Reuse scene-reference stills across shots to reduce drift
@@ -25,4 +25,4 @@ Platform notes
 - [ ] Sora prompt includes camera direction
 - [ ] Runway prompt stays concise (<400 chars for condensed form)
 - [ ] Kling prompt includes motion verbs and subject movement
-- [ ] Start/end frames use `LRN Man.png` where supported
+- [ ] Start/end frames use `CyberChief.png` where supported
