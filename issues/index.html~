@@ -170,7 +170,7 @@ body { background: #080810; }
   <h1></h1>THE BLIZZARD GALAXY PRESENTS</h1>
   <div class="tagline">THE LRN NETWORK UNIVERSE</div>
   <p class="universe-text">
-    From the ashes of Planet Maytag, the last son of the most advanced civilization in the galaxy
+    From the ashes of Planet Musk, the last son of the most advanced civilization in the galaxy
     came to Earth — to build the most secure network the world has ever seen, and to protect it
     from every cyber threat in the universe. Real tools. Real threats. One unstoppable defender.
   </p>
@@ -182,7 +182,7 @@ body { background: #080810; }
     <img src="../art/Copilot_20260328_202719.png" alt="Issue #1 Cover">
     <div class="issue-card-info">
       <span class="number">ISSUE #1</span>
-      <h3>The Last Son of Maytag</h3>
+      <h3>The Last Son of Musk</h3>
       <div class="subtitle">His Origin. His Mission. His First Battle.</div>
       <div class="tools-count">⚙ 23 CYBERSECURITY TOOLS</div>
     </div>
@@ -245,7 +245,7 @@ body { background: #080810; }
     </div>
     <div class="lore-item">
       <img src="../art/the Mikes logo.png" alt="The Mikes">
-      <span>The Mikes — Warriors of Maytag</span>
+      <span>The Mikes — Warriors of Musk</span>
     </div>
     <div class="lore-item">
       <img src="../art/CyberChief Logo.png" alt="CyberChief Logo">

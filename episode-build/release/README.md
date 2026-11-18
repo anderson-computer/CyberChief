@@ -12,7 +12,7 @@ Contents
 Episode details
 - Title: CyberChief: Defender of the Network
 - Episode: 1
-- Subtitle: The Last Son of Maytag
+- Subtitle: The Last Son of Musk
 - Format: motion-comic animatic
 - Resolution: 1920x1080
 

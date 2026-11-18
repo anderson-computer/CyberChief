@@ -42,12 +42,12 @@ INSTALL ON LINUX
 
 ISSUES IN THIS SERIES
 ---------------------
-  #1  The Last Son of Maytag         — His Origin. His Mission.
+  #1  The Last Son of Musk         — His Origin. His Mission.
   #2  The Ransomware Wars            — Locked. Encrypted. Under Siege.
   #3  The Botnet Invasion            — When the Machines Rise
   #4  The Social Engineer            — Hook, Line, and Sinker
   #5  The Quantum Conspiracy         — When Encryption Falls, Chaos Reigns
-  #6  The Signal from Maytag         — Containers of Chaos
+  #6  The Signal from Musk         — Containers of Chaos
 
 
 SYSTEM REQUIREMENTS

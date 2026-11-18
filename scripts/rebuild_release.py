@@ -2,7 +2,7 @@
 """Rebuild CyberChief portable release artifacts.
 
 Creates:
-- issues/issue-06.html from CyberChief-Issue-6-The-Signal-from-Maytag.md
+- issues/issue-06.html from CyberChief-Issue-6-The-Signal-from-Musk.md
 - pdfs/cyberchief-issue-06.pdf via Chrome headless when available
 - dist/output/cyberchief-comic-email.zip
 - dist/output/cyberchief-comic-full.zip
@@ -24,7 +24,7 @@ ROOT = Path(__file__).resolve().parents[1]
 DIST = ROOT / "dist"
 OUT = DIST / "output"
 STAGING = ROOT / "build" / "release-staging"
-ISSUE6_MD = ROOT / "CyberChief-Issue-6-The-Signal-from-Maytag.md"
+ISSUE6_MD = ROOT / "CyberChief-Issue-6-The-Signal-from-Musk.md"
 ISSUE6_HTML = ROOT / "issues" / "issue-06.html"
 ISSUE6_PDF = ROOT / "pdfs" / "cyberchief-issue-06.pdf"
 
@@ -146,7 +146,7 @@ def md_to_issue_html(md: str) -> str:
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CyberChief #6 — The Signal from Maytag | Mike Anderson</title>
+<title>CyberChief #6 — The Signal from Musk | Mike Anderson</title>
 <link rel="stylesheet" href="comic.css">
 <style>
 .issue-list {{ margin: 1rem 2rem; line-height: 1.7; }}
@@ -158,12 +158,12 @@ def md_to_issue_html(md: str) -> str:
 <body>
 <nav class="issue-nav">
   <a href="issue-05.html">◀ ISSUE #5</a>
-  <span>ISSUE #6 — THE SIGNAL FROM MAYTAG</span>
+  <span>ISSUE #6 — THE SIGNAL FROM MUSK</span>
   <a href="index.html">ALL ISSUES ▶</a>
 </nav>
 <div class="cover-spread" style="padding:48px 24px;text-align:center;background:radial-gradient(circle at 50% 20%,#113a7a,#080810 65%);">
   <img src="../art/CyberChief Logo.png" alt="CyberChief Logo" style="max-width:300px;filter:drop-shadow(0 0 24px rgba(77,195,255,.7));">
-  <div style="font-family:'Bangers',Impact,fantasy;font-size:3rem;letter-spacing:6px;color:var(--caption-yellow);margin-top:24px;">THE SIGNAL FROM MAYTAG</div>
+  <div style="font-family:'Bangers',Impact,fantasy;font-size:3rem;letter-spacing:6px;color:var(--caption-yellow);margin-top:24px;">THE SIGNAL FROM MUSK</div>
   <div style="font-family:'Bangers',Impact,fantasy;font-size:1.4rem;letter-spacing:3px;color:var(--blue-glow);">CONTAINERS OF CHAOS</div>
   <div style="margin-top:18px;color:#aab;">Issue #6 · Cloud &amp; Container Security · 10 New Tools · 65 Total</div>
 </div>

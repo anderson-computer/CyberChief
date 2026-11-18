@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CyberChief #1 — The Last Son of Maytag</title>
+<title>CyberChief #1 — The Last Son of Musk</title>
 <link rel="stylesheet" href="comic.css">
 </head>
 <body>
@@ -11,13 +11,13 @@
 <!-- Navigation -->
 <nav class="issue-nav">
   <a href="index.html">◀ ALL ISSUES</a>
-  <span class="nav-title">CYBERCHIEF #1 — THE LAST SON OF MAYTAG</span>
+  <span class="nav-title">CYBERCHIEF #1 — THE LAST SON OF MUSK</span>
   <a href="issue-02.html">ISSUE #2 ▶</a>
 </nav>
 
 <!-- Cover -->
 <div class="cover-spread">
-  <img src="../art/Copilot_20260328_202719.png" alt="CyberChief #1 — The Last Son of Maytag">
+  <img src="../art/Copilot_20260328_202719.png" alt="CyberChief #1 — The Last Son of Musk">
 </div>
 
 <!-- Alternate Cover -->
@@ -32,7 +32,7 @@
   </div>
   <div class="issue-number-badge">ISSUE #1</div>
   <h1>CYBERCHIEF: DEFENDER OF THE NETWORK</h1>
-  <h2>"THE LAST SON OF MAYTAG"</h2>
+  <h2>"THE LAST SON OF MUSK"</h2>
   <div class="tagline">"23 Real-World Cybersecurity Tools. One Unstoppable Hero."</div>
   <div class="credits-grid">
     <div class="credits-item"><label>Created &amp; Written By</label><span>Mike Anderson</span></div>
@@ -62,14 +62,14 @@
 
     <div class="panel-grid grid-1">
       <div class="panel">
-        <img src="../art/Copilot_20260328_202415.png" alt="Planet Maytag — The Council of Root Admins — CyberChief departing">
-        <div class="caption">PLANET MAYTAG — THE COUNCIL OF ROOT ADMINS — THE LAST DEPARTURE</div>
+        <img src="../art/Copilot_20260328_202415.png" alt="Planet Musk — The Council of Root Admins — CyberChief departing">
+        <div class="caption">PLANET MUSK — THE COUNCIL OF ROOT ADMINS — THE LAST DEPARTURE</div>
       </div>
     </div>
 
     <div class="dialogue-section">
-      <span class="bubble narration">Planet Maytag. A civilization built on perfect architecture, unbreakable encryption,
-      and absolute network sovereignty. For ten thousand cycles, the Maytag people thrived — their networks impenetrable,
+      <span class="bubble narration">Planet Musk. A civilization built on perfect architecture, unbreakable encryption,
+      and absolute network sovereignty. For ten thousand cycles, the Musk people thrived — their networks impenetrable,
       their data sacred, their protocols flawless.</span>
 
       <br><br>
@@ -84,7 +84,7 @@
 
     <div class="panel-grid grid-1" style="margin-top:16px;">
       <div class="panel">
-        <img src="../art/Copilot_20260328_202411.png" alt="LRN on Planet Maytag — Zero-Day King — CyberChief in space">
+        <img src="../art/Copilot_20260328_202411.png" alt="LRN on Planet Musk — Zero-Day King — CyberChief in space">
         <div class="caption">LRN STEPS FORWARD — THE ZERO-DAY KING STIRS — THE JOURNEY BEGINS</div>
       </div>
     </div>
@@ -104,7 +104,7 @@
       <span class="bubble lrn">"Every network starts with a single packet. I will teach them."</span>
 
       <br><br>
-      <span class="bubble narration">And so, the last great defender of Maytag loaded the tools of his civilization into a capsule
+      <span class="bubble narration">And so, the last great defender of Musk loaded the tools of his civilization into a capsule
       of compressed data, aimed for the blue planet, and launched into the void between stars.</span>
 
       <br>
@@ -148,20 +148,20 @@
 
       <br><br>
       <span class="speaker">CYBERCHIEF (HUD VIEW):</span>
-      <span class="bubble lrn">"By the Root Admins of Maytag… it's worse than the Council feared. These networks are completely naked.
+      <span class="bubble lrn">"By the Root Admins of Musk… it's worse than the Council feared. These networks are completely naked.
       No identity governance. No certificate authority. DNS is… unsecured. CRITICAL VULNERABILITIES DETECTED: 4,271,553,902."</span>
     </div>
 
     <div class="panel-grid grid-1" style="margin-top:16px;">
       <div class="panel">
-        <img src="../art/Copilot_20260328_202656.png" alt="CyberChief overview — Planet Maytag, Arrival, Secure Network">
-        <div class="caption">FROM PLANET MAYTAG · ARRIVAL ON EARTH · A SUPER SECURE NETWORK — THE MISSION BEGINS</div>
+        <img src="../art/Copilot_20260328_202656.png" alt="CyberChief overview — Planet Musk, Arrival, Secure Network">
+        <div class="caption">FROM PLANET MUSK · ARRIVAL ON EARTH · A SUPER SECURE NETWORK — THE MISSION BEGINS</div>
       </div>
     </div>
 
     <div class="dialogue-section">
       <span class="bubble narration">And so began the greatest infrastructure project in Earth's history.
-      What took the people of Maytag a thousand cycles, CyberChief would accomplish in days.
+      What took the people of Musk a thousand cycles, CyberChief would accomplish in days.
       Because the enemy was already here.</span>
 
       <br><br>
@@ -325,7 +325,7 @@
         <div class="caption">THE ARSENAL COMPLETE — AUTOMATION ONLINE — SBAI ACTIVATED</div>
       </div>
       <div class="panel">
-        <img src="../art/Copilot_20260328_202425.png" alt="Planet Maytag — Zero-Day King with staff — CyberChief in space">
+        <img src="../art/Copilot_20260328_202425.png" alt="Planet Musk — Zero-Day King with staff — CyberChief in space">
         <div class="caption">THE THREAT GATHERS — THE SHADOW SYNDICATE MOBILIZES</div>
       </div>
     </div>
@@ -542,7 +542,7 @@
   </p>
 
   <p class="final-narration" style="margin-top:16px;">
-    He is the last son of Maytag. The architect of the unbreakable network.
+    He is the last son of Musk. The architect of the unbreakable network.
     The guardian who never sleeps, never rests, and never lets a single malicious packet pass unchallenged.
   </p>
 
@@ -554,7 +554,7 @@
 <div class="back-matter">
 
   <h2>⚙ UTILITY BELT — ISSUE #1 FIELD GUIDE</h2>
-  <p style="color:#778;font-size:0.82rem;margin-bottom:16px;">CLEARANCE LEVEL: ROOT · CLASSIFICATION: MAYTAG COUNCIL EYES ONLY · 23 TOOLS</p>
+  <p style="color:#778;font-size:0.82rem;margin-bottom:16px;">CLEARANCE LEVEL: ROOT · CLASSIFICATION: MUSK COUNCIL EYES ONLY · 23 TOOLS</p>
 
   <table class="tools-table">
     <thead><tr><th>#</th><th>Tool</th><th>Category</th><th>Function</th></tr></thead>
@@ -611,7 +611,7 @@
 </div>
 
 <div class="issue-footer">
-  <strong>CYBERCHIEF: DEFENDER OF THE NETWORK — Issue #1 "The Last Son of Maytag"</strong><br>
+  <strong>CYBERCHIEF: DEFENDER OF THE NETWORK — Issue #1 "The Last Son of Musk"</strong><br>
   Created by Mike Anderson · Published by Anderson Computer Consulting<br>
   © Anderson Computer Consulting. All rights reserved.<br>
   All cybersecurity tools referenced in this publication are real, publicly available software.<br>

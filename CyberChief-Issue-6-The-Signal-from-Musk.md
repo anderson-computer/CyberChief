@@ -1,5 +1,5 @@
 # CYBERCHIEF
-## ISSUE #6: THE SIGNAL FROM MAYTAG
+## ISSUE #6: THE SIGNAL FROM MUSK
 ### "Containers of Chaos"
 
 **Created by:** Mike Anderson
@@ -19,7 +19,7 @@
 
 **Composition:** Full-bleed, vertical orientation. Extreme cinematic scope.
 
-**FOREGROUND:** CyberChief stands center-frame on the crumbling, crystalline surface of Planet Maytag. His blue and silver armored suit is battle-worn but his chest emblem "LRN" blazes brighter than ever. His rectangular BLACK-FRAMED GLASSES reflect the dying light of his homeworld.
+**FOREGROUND:** CyberChief stands center-frame on the crumbling, crystalline surface of Planet Musk. His blue and silver armored suit is battle-worn but his chest emblem "LRN" blazes brighter than ever. His rectangular BLACK-FRAMED GLASSES reflect the dying light of his homeworld.
 
 **MID-GROUND LEFT:** Dr. Elara Voss stands at CyberChief's side with quantum equipment glowing violet-white.
 
@@ -27,7 +27,7 @@
 
 **BACKGROUND -- UPPER:** The faint ghostly outlines of Elder Sudo and Elder Chmod reach toward CyberChief from within their prison.
 
-**TITLE TREATMENT:** "CYBERCHIEF" in bold metallic silver-blue. Subtitle: "THE SIGNAL FROM MAYTAG" in white with blue glow.
+**TITLE TREATMENT:** "CYBERCHIEF" in bold metallic silver-blue. Subtitle: "THE SIGNAL FROM MUSK" in white with blue glow.
 
 **BOTTOM TAGLINE:** *"The Last Son Comes Home."*
 
@@ -39,7 +39,7 @@
 
 Five horizontal panels stacked vertically depicting key moments from previous issues.
 
-> "My name is CyberChief. I was born on a world called Maytag -- a planet of pure digital architecture -- and sent to Earth as an infant when The Null consumed my homeworld."
+> "My name is CyberChief. I was born on a world called Musk -- a planet of pure digital architecture -- and sent to Earth as an infant when The Null consumed my homeworld."
 
 **RECAP PANEL 1 -- ISSUE #1: DEFENDER OF THE NETWORK**
 CyberChief deploys firewall constructs against the Shadow Syndicate. 23 tool icons orbit his utility belt.
@@ -78,12 +78,12 @@ The Bastion command center. Multiple holographic displays cast blue-white light.
 Close-up of CyberChief's hands on a console. A waveform pulses -- not random noise, but structured data.
 
 > CYBERCHIEF: "ARIA, isolate that signal. Strip the background radiation."
-> ARIA: "Signal isolated. CyberChief... this carrier wave matches Maytag encoding protocols."
+> ARIA: "Signal isolated. CyberChief... this carrier wave matches Musk encoding protocols."
 
 **PANEL 3**
 CyberChief removes his glasses, staring at decoded text on screen.
 
-> DECODED SIGNAL: "CHILDREN OF MAYTAG -- THE CONTAINMENT FAILS -- THE NULL HUNGERS -- WE CANNOT HOLD -- COME HOME"
+> DECODED SIGNAL: "CHILDREN OF MUSK -- THE CONTAINMENT FAILS -- THE NULL HUNGERS -- WE CANNOT HOLD -- COME HOME"
 > CYBERCHIEF: "That's... that's Elder Sudo's encryption signature. They're alive."
 
 **PANEL 4**
@@ -100,12 +100,12 @@ Dr. Elara Voss enters the Bastion.
 **PANEL 1 -- WIDE SHOT**
 CyberChief and Dr. Voss in the Bastion workshop. Equipment laid out.
 
-> CYBERCHIEF: "Maytag was a planet of pure digital architecture -- containerized systems, orchestrated infrastructure. If The Null has corrupted it, we need container security tools."
+> CYBERCHIEF: "Musk was a planet of pure digital architecture -- containerized systems, orchestrated infrastructure. If The Null has corrupted it, we need container security tools."
 
 **PANEL 2**
 CyberChief loads tools into his belt.
 
-> CYBERCHIEF: "Falco for runtime detection. Trivy for vulnerability scanning. These aren't just tools -- on Maytag, these were the fundamental forces of order."
+> CYBERCHIEF: "Falco for runtime detection. Trivy for vulnerability scanning. These aren't just tools -- on Musk, these were the fundamental forces of order."
 
 ## Scene 3: Entering the Digital Hyperspace
 
@@ -118,7 +118,7 @@ CyberChief and Dr. Voss step into a quantum bridge -- a tunnel of pure data.
 
 # ACT 2: THE FIVE HERALDS
 
-> NARRATION: "Planet Maytag. I expected ruins. Instead, I find a war zone -- five layers of corrupted defense, each one guarded by a Herald of The Null. They were once the planet's protectors. Now they're its prison guards."
+> NARRATION: "Planet Musk. I expected ruins. Instead, I find a war zone -- five layers of corrupted defense, each one guarded by a Herald of The Null. They were once the planet's protectors. Now they're its prison guards."
 
 ## LAYER 1: BREAKOUT -- The Shatterer of Boundaries
 
@@ -217,7 +217,7 @@ The Orchestrator's staff straightens. Clean YAML flows replace corrupted configs
 **PANEL 1 -- SPLASH**
 A multi-headed beast made of server racks and cloud instances. Each head spawns more resources.
 
-> CLOUD HYDRA: "Cut one head, two more spawn. Every instance I create drains Maytag's remaining power. You cannot outpace infinity."
+> CLOUD HYDRA: "Cut one head, two more spawn. Every instance I create drains Musk's remaining power. You cannot outpace infinity."
 
 **PANEL 2**
 CyberChief deploys Prisma Cloud for visibility across the sprawling cloud infrastructure.
@@ -272,12 +272,12 @@ The Masquerade's stolen masks fall away, revealing the original Identity Arbiter
 
 # ACT 3: THE NULL
 
-## Scene 1: Planet Maytag -- Homecoming
+## Scene 1: Planet Musk -- Homecoming
 
 **PANEL 1 -- DOUBLE-PAGE SPLASH**
-Planet Maytag's core revealed. Crystalline server towers, rivers of liquid data. At the center, a massive containment sphere where Elder Sudo and Elder Chmod maintain The Null's prison.
+Planet Musk's core revealed. Crystalline server towers, rivers of liquid data. At the center, a massive containment sphere where Elder Sudo and Elder Chmod maintain The Null's prison.
 
-> NARRATION: "Planet Maytag. My homeworld. For thirty years, two Elders have held back the fundamental force of digital entropy with nothing but willpower and root access."
+> NARRATION: "Planet Musk. My homeworld. For thirty years, two Elders have held back the fundamental force of digital entropy with nothing but willpower and root access."
 
 **PANEL 2**
 CyberChief approaches the containment sphere. Two translucent figures inside -- Elder Sudo and Elder Chmod -- ancient, exhausted, but still fighting.
@@ -299,7 +299,7 @@ CyberChief stands against The Null, all 65 tools activated. The five restored He
 > CYBERCHIEF: "You're right. I can't destroy you. Entropy is fundamental. But I can CONTAIN you. Every tool I've ever learned, every battle I've fought -- it was all preparation for this."
 
 **PANEL 3**
-The Heralds take their positions -- each one resuming their original Maytag role.
+The Heralds take their positions -- each one resuming their original Musk role.
 
 > BREAKOUT: "Container isolation -- restored."
 > VENOM REGISTRY: "Image integrity -- verified."
@@ -317,7 +317,7 @@ CyberChief channels all 65 tools simultaneously. A massive containment construct
 **PANEL 2**
 The Null is sealed. Not destroyed -- contained. A permanent prison of layered security.
 
-> NARRATION: "The Null cannot be destroyed. It is the fundamental entropy of digital systems. But it can be contained -- layer upon layer of security, monitored eternally by the tools and guardians of Maytag."
+> NARRATION: "The Null cannot be destroyed. It is the fundamental entropy of digital systems. But it can be contained -- layer upon layer of security, monitored eternally by the tools and guardians of Musk."
 
 ---
 
@@ -337,7 +337,7 @@ Elder Sudo and Elder Chmod step free from the containment sphere for the first t
 **PANEL 1**
 CyberChief, Dr. Voss, and the Elders prepare to return to Earth via the quantum bridge.
 
-> DR. VOSS: "The containment will hold. The Heralds are restored to their guardian roles. Maytag will heal."
+> DR. VOSS: "The containment will hold. The Heralds are restored to their guardian roles. Musk will heal."
 > CYBERCHIEF: "And Earth still needs defending. The belt carries 65 tools now. Time to go home."
 
 ## Scene 3: The Warning
@@ -347,12 +347,12 @@ Elder Sudo pulls CyberChief aside before they leave.
 
 > ELDER SUDO: "There is something you must know. The Null did not arise naturally. It was created."
 > CYBERCHIEF: "Created? By what?"
-> ELDER SUDO: "By something older than Maytag. Something older than any system we've ever known. We call it... The Kernel Panic."
+> ELDER SUDO: "By something older than Musk. Something older than any system we've ever known. We call it... The Kernel Panic."
 
 ## Scene 4: The Final Teaser
 
 **PANEL 1 -- FINAL PAGE**
-Deep in the void beyond Maytag, something stirs. Ancient. Vast. An intelligence that predates all digital systems.
+Deep in the void beyond Musk, something stirs. Ancient. Vast. An intelligence that predates all digital systems.
 
 > NARRATION: "The Null was just a weapon. A tool of destruction wielded by something far more ancient. The Kernel Panic -- the intelligence that exists in the space before any system boots, in the moment before any kernel loads. It created The Null. And now it knows CyberChief exists."
 
