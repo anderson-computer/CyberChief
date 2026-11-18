@@ -1,6 +1,6 @@
 [AutoRun]
 open=LAUNCH.bat
-icon=art\cyberchief.ico
+icon=art\v2\cyberchief.ico
 label=CyberChief - Defender of the Network
 action=Read CyberChief: Defender of the Network
 

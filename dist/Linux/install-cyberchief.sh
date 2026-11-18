@@ -67,7 +67,7 @@ DESKTOP_DIR="$HOME/.local/share/applications"
 mkdir -p "$DESKTOP_DIR"
 
 # Find icon
-ICON="$INSTALL_DIR/art/CyberChief Logo.png"
+ICON="$INSTALL_DIR/art/v2/CyberChief Logo.png"
 [ ! -f "$ICON" ] && ICON="application-x-executable"
 
 cat > "$DESKTOP_DIR/cyberchief.desktop" << DESKTOP
