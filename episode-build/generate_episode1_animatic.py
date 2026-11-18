@@ -24,7 +24,7 @@ MANIFEST = OUT / 'scene_manifest.json'
 scenes = [
     {'kind': 'intro', 'image': str(BASE / 'art/CyberChief Logo=blk background.png'), 'duration': 5.0, 'label': 'CYBERCHIEF: DEFENDER OF THE NETWORK', 'sub': 'Episode 1 — The Last Son of Musk'},
     {'kind': 'scene', 'image': str(BASE / 'art/cyberchief_20260328_202415.png'), 'duration': 7.5, 'label': 'PLANET MUSK — THE COUNCIL OF ROOT ADMINS', 'sub': 'A perfect digital civilization sees Earth standing exposed.'},
-    {'kind': 'scene', 'image': str(BASE / 'art/cyberchief_20260328_202411.png'), 'duration': 7.5, 'label': 'THE LAST DEPARTURE', 'sub': 'LRN accepts the mission and launches from Musk.'},
+    {'kind': 'scene', 'image': str(BASE / 'art/cyberchief_20260328_202411.png'), 'duration': 7.5, 'label': 'THE LAST DEPARTURE', 'sub': 'AC accepts the mission and launches from Musk.'},
     {'kind': 'scene', 'image': str(BASE / 'art/cyberchief_20260328_202146.png'), 'duration': 7.5, 'label': 'FIRST BOOT COMPLETE', 'sub': 'CyberChief arrives on Earth and begins his scan.'},
     {'kind': 'scene', 'image': str(BASE / 'art/cyberchief_20260328_202348.png'), 'duration': 7.5, 'label': 'THREATS DETECTED', 'sub': 'He finds a planet drowning in exposed systems and weak defenses.'},
     {'kind': 'scene', 'image': str(BASE / 'art/cyberchief_20260328_202656.png'), 'duration': 7.5, 'label': 'THE MISSION BEGINS', 'sub': 'Earth becomes the site of the greatest infrastructure project in history.'},

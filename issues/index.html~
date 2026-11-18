@@ -168,7 +168,7 @@ body { background: #080810; }
 <div class="series-header">
   <img class="series-logo" src="../art/CyberChief Logo=blk background.png" alt="CyberChief — Defender of the Network">
   <h1></h1>THE BLIZZARD GALAXY PRESENTS</h1>
-  <div class="tagline">THE LRN NETWORK UNIVERSE</div>
+  <div class="tagline">THE AC NETWORK UNIVERSE</div>
   <p class="universe-text">
     From the ashes of Planet Musk, the last son of the most advanced civilization in the galaxy
     came to Earth — to build the most secure network the world has ever seen, and to protect it
@@ -233,7 +233,7 @@ body { background: #080810; }
 <hr class="universe-divider">
 
 <div class="lore-section">
-  <h2>LRN NETWORK UNIVERSE — LORE ASSETS</h2>
+  <h2>AC NETWORK UNIVERSE — LORE ASSETS</h2>
   <div class="lore-grid">
     <div class="lore-item">
       <img src="../art/CyberChief.png" alt="CyberChief">

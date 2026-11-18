@@ -37,7 +37,7 @@
   <div class="credits-grid">
     <div class="credits-item"><label>Created &amp; Written By</label><span>Mike Anderson</span></div>
     <div class="credits-item"><label>Published By</label><span>Anderson Computer Consulting</span></div>
-    <div class="credits-item"><label>Universe</label><span>LRN Network Universe</span></div>
+    <div class="credits-item"><label>Universe</label><span>AC Network Universe</span></div>
     <div class="credits-item"><label>Issue</label><span>#1 of 5</span></div>
   </div>
   <p style="color:#556;font-size:0.8rem;font-style:italic;">
@@ -84,13 +84,13 @@
 
     <div class="panel-grid grid-1" style="margin-top:16px;">
       <div class="panel">
-        <img src="../art/Copilot_20260328_202411.png" alt="LRN on Planet Musk — Zero-Day King — CyberChief in space">
-        <div class="caption">LRN STEPS FORWARD — THE ZERO-DAY KING STIRS — THE JOURNEY BEGINS</div>
+        <img src="../art/Copilot_20260328_202411.png" alt="AC on Planet Musk — Zero-Day King — CyberChief in space">
+        <div class="caption">AC STEPS FORWARD — THE ZERO-DAY KING STIRS — THE JOURNEY BEGINS</div>
       </div>
     </div>
 
     <div class="dialogue-section">
-      <span class="speaker">LRN:</span>
+      <span class="speaker">AC:</span>
       <span class="bubble lrn">"Then I will go. Give me the Utility Belt of Protocols and access to the Full Stack Arsenal.
       I will build them a network so secure that even the Shadow Syndicate will break against it like packets against a firewall."</span>
 
@@ -100,7 +100,7 @@
       outdated kernels, and humans who store passwords in plain text."</span>
 
       <br>
-      <span class="speaker">LRN:</span>
+      <span class="speaker">AC:</span>
       <span class="bubble lrn">"Every network starts with a single packet. I will teach them."</span>
 
       <br><br>
