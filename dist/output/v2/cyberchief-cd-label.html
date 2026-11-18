@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>CyberChief</title>
+<style>
+  @font-face {
+    font-family: 'Bangers';
+    src: url('file:///usr/share/fonts/truetype/sand-box/google/Bangers/Bangers-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: #bbb;
+    font-family: 'Bangers', Impact, fantasy;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 24px;
+  }
+
+  .instructions {
+    background: #fff;
+    border: 2px solid #333;
+    border-radius: 6px;
+    padding: 14px 20px;
+    max-width: 760px;
+    font-family: Arial, sans-serif;
+    font-size: 0.85rem;
+    line-height: 1.6;
+  }
+  .instructions h2 { font-size: 1rem; margin-bottom: 8px; }
+  .instructions ul  { margin-left: 20px; }
+
+  .print-sheet {
+    background: white;
+    width: 8.5in;
+    height: 11in;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0.5in 0;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.35);
+  }
+
+  .label-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 4.72in;
+    height: 4.72in;
+    position: relative;
+  }
+
+  .label-wrap svg {
+    width: 4.72in;
+    height: 4.72in;
+    overflow: visible;
+    filter: drop-shadow(0 3px 8px rgba(0,0,0,0.5));
+  }
+
+  /* Dashed cut-guide on screen only */
+  .label-wrap::after {
+    content: '';
+    position: absolute;
+    width: 4.72in;
+    height: 4.72in;
+    border-radius: 50%;
+    border: 1px dashed #888;
+    pointer-events: none;
+  }
+
+  @media print {
+    body { background: white; padding: 0; }
+    .instructions { display: none; }
+    .print-sheet { width: 8.5in; height: 11in; box-shadow: none; }
+    .label-wrap::after { display: none; }
+    @page { size: letter; margin: 0; }
+  }
+</style>
+</head>
+<body>
+
+<div class="instructions">
+  <h2>🖨 CyberChief DVD Label — Print Instructions</h2>
+  <ul>
+    <li>Print on <strong>Avery 5692, 8692, 8942</strong> or compatible CD/DVD label sheets (2 labels per sheet).</li>
+    <li>Or print on plain paper/glossy stock and trim to the dashed circle.</li>
+    <li>Set printer to <strong>Actual Size / 100%</strong> — do <em>not</em> scale to fit.</li>
+    <li>Each label is exactly <strong>4.72 inches (120mm)</strong> diameter · center hole <strong>0.63"</strong>.</li>
+    <li>The dashed circle is a screen-only cut guide — it will <em>not</em> appear on your printout.</li>
+  </ul>
+</div>
+
+<div class="print-sheet">
+
+  <!-- ═══════════════════  LABEL 1  ═══════════════════ -->
+  <div class="label-wrap">
+    <svg viewBox="0 0 480 480" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+
+        <!-- Clip to disc outline -->
+        <clipPath id="c1-disc">
+          <circle cx="240" cy="240" r="238"/>
+        </clipPath>
+
+        <!-- Clip to disc with hub hole -->
+        <clipPath id="c1-full">
+          <path fill-rule="evenodd"
+            d="M240,2 A238,238 0 1,1 239.999,2 Z
+               M240,224 A16,16 0 1,0 240.001,224 Z"/>
+        </clipPath>
+
+        <!-- Background gradient -->
+        <radialGradient id="g1-bg" cx="50%" cy="38%" r="55%">
+          <stop offset="0%"   stop-color="#0e1d40"/>
+          <stop offset="55%"  stop-color="#06091c"/>
+          <stop offset="100%" stop-color="#020408"/>
+        </radialGradient>
+
+        <!-- Rim glow -->
+        <radialGradient id="g1-rim" cx="50%" cy="50%" r="50%">
+          <stop offset="82%"  stop-color="transparent"/>
+          <stop offset="100%" stop-color="#1040ff" stop-opacity="0.55"/>
+        </radialGradient>
+
+        <!-- Logo area dark backing -->
+        <linearGradient id="g1-logobg" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%"   stop-color="#000814" stop-opacity="0.85"/>
+          <stop offset="100%" stop-color="#000814" stop-opacity="0.3"/>
+        </linearGradient>
+
+        <!-- Filters -->
+        <filter id="f1-glow" x="-40%" y="-40%" width="180%" height="180%">
+          <feGaussianBlur stdDeviation="4" result="blur"/>
+          <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+        </filter>
+        <filter id="f1-logo" x="-10%" y="-10%" width="120%" height="120%">
+          <feGaussianBlur stdDeviation="2" result="blur"/>
+          <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+        </filter>
+        <filter id="f1-char" x="-5%" y="-5%" width="110%" height="110%">
+          <feDropShadow dx="0" dy="0" stdDeviation="6" flood-color="#1a6aff" flood-opacity="0.7"/>
+        </filter>
+
+        <!-- Hex grid -->
+        <pattern id="g1-hex" x="0" y="0" width="30" height="26" patternUnits="userSpaceOnUse">
+          <polygon points="15,1 29,8.5 29,17.5 15,25 1,17.5 1,8.5"
+            fill="none" stroke="#1a3a6a" stroke-width="0.5" opacity="0.28"/>
+        </pattern>
+
+        <!-- Curved text paths -->
+        <path id="t1-top"    d="M 72,240  A 168,168 0 0,1 408,240"/>
+        <path id="t1-sub"    d="M 90,240  A 150,150 0 0,1 390,240"/>
+        <path id="t1-face"   d="M 114,240 A 126,126 0 0,1 366,240"/>
+        <path id="t1-bottom" d="M 68,258  A 172,172 0 0,0 412,258"/>
+        <path id="t1-tools"  d="M 105,257 A 135,135 0 0,0 375,257"/>
+        <path id="t1-hub"    d="M 217.5,240 A 22.5,22.5 0 0,1 262.5,240"/>
+
+      </defs>
+
+      <!-- ════ BACKGROUND ════ -->
+      <g clip-path="url(#c1-full)">
+
+        <circle cx="240" cy="240" r="238" fill="url(#g1-bg)"/>
+        <circle cx="240" cy="240" r="238" fill="url(#g1-hex)"/>
+        <circle cx="240" cy="240" r="238" fill="url(#g1-rim)"/>
+
+        <!-- Stars -->
+        <g fill="white">
+          <circle cx="58"  cy="82"  r="1.1" opacity=".55"/>
+          <circle cx="118" cy="48"  r="0.7" opacity=".55"/>
+          <circle cx="198" cy="36"  r="1.4" opacity=".6"/>
+          <circle cx="308" cy="52"  r="0.9" opacity=".55"/>
+          <circle cx="388" cy="72"  r="1.2" opacity=".55"/>
+          <circle cx="432" cy="138" r="0.8" opacity=".5"/>
+          <circle cx="442" cy="208" r="1.1" opacity=".55"/>
+          <circle cx="422" cy="318" r="0.7" opacity=".5"/>
+          <circle cx="382" cy="398" r="1.3" opacity=".6"/>
+          <circle cx="292" cy="442" r="0.9" opacity=".55"/>
+          <circle cx="182" cy="436" r="1.1" opacity=".55"/>
+          <circle cx="98"  cy="392" r="0.8" opacity=".5"/>
+          <circle cx="46"  cy="312" r="1.2" opacity=".55"/>
+          <circle cx="52"  cy="202" r="0.7" opacity=".5"/>
+          <circle cx="76"  cy="152" r="1"   opacity=".55"/>
+          <circle cx="152" cy="62"  r="0.6" opacity=".5"/>
+          <!-- Bright stars -->
+          <circle cx="82"  cy="118" r="2"   opacity=".85" filter="url(#f1-glow)"/>
+          <circle cx="392" cy="182" r="1.8" opacity=".85" filter="url(#f1-glow)"/>
+          <circle cx="262" cy="442" r="2.1" opacity=".85" filter="url(#f1-glow)"/>
+          <circle cx="138" cy="398" r="1.6" opacity=".8"  filter="url(#f1-glow)"/>
+          <circle cx="52"  cy="155" r="1.5" opacity=".75" filter="url(#f1-glow)"/>
+        </g>
+
+        <!-- Planet Musk -->
+        <circle cx="368" cy="80" r="24" fill="#091e4a" opacity="0.85"/>
+        <circle cx="368" cy="80" r="24" fill="none" stroke="#1a4a99" stroke-width="0.8" opacity="0.5"/>
+        <ellipse cx="368" cy="80" rx="37" ry="8" fill="none" stroke="#2255aa" stroke-width="1.8" opacity="0.55"/>
+
+        <!-- Energy rings -->
+        <circle cx="240" cy="240" r="172" fill="none" stroke="#1a6aff" stroke-width="0.7" opacity="0.2"/>
+        <circle cx="240" cy="240" r="155" fill="none" stroke="#1a6aff" stroke-width="0.5" opacity="0.15"/>
+        <circle cx="240" cy="240" r="115" fill="none" stroke="#0840bb" stroke-width="1"   opacity="0.22"/>
+
+        <!-- ══ CYBERCHIEF CHARACTER — center stage ══ -->
+        <image href="../../../art/CyberChief.png"
+          x="130" y="120" width="220" height="220"
+          clip-path="url(#c1-disc)"
+          preserveAspectRatio="xMidYMid meet"
+          filter="url(#f1-char)"
+          opacity="1"/>
+
+        <!-- ══ CURVED TOP ARC: MIKE ANDERSON PRESENTS ══ -->
+        <text font-family="'Bangers',Impact,fantasy" font-size="14"
+              fill="#5577aa" letter-spacing="4.5">
+          <textPath href="#t1-top" startOffset="50%" text-anchor="middle">
+            MIKE ANDERSON PRESENTS
+          </textPath>
+        </text>
+
+        <!-- ══ SUB ARC: 5-ISSUE COMPLETE SERIES ══ -->
+        <text font-family="'Bangers',Impact,fantasy" font-size="12"
+              fill="#ffe84d" letter-spacing="3" opacity="0.9">
+          <textPath href="#t1-sub" startOffset="50%" text-anchor="middle">
+            5-ISSUE COMPLETE SERIES
+          </textPath>
+        </text>
+
+        <!-- ══ DISC FACE: CYBERCHIEF ══ -->
+        <text font-family="'Bangers',Impact,fantasy" font-size="20"
+              fill="#ffe84d" letter-spacing="3" filter="url(#f1-glow)">
+          <textPath href="#t1-face" startOffset="50%" text-anchor="middle">
+            CYBERCHIEF
+          </textPath>
+        </text>
+
+        <!-- ══ CURVED BOTTOM: DEFENDER OF THE NETWORK ══ -->
+        <text font-family="'Bangers',Impact,fantasy" font-size="15.5"
+              fill="#ffe84d" letter-spacing="3.5" filter="url(#f1-glow)">
+          <textPath href="#t1-bottom" startOffset="50%" text-anchor="middle">
+            DEFENDER  OF  THE  NETWORK
+          </textPath>
+        </text>
+
+        <!-- ══ INNER ARC: TOOL COUNT ══ -->
+        <text font-family="'Bangers',Impact,fantasy" font-size="9.5"
+              fill="#00dd77" letter-spacing="2" opacity="0.85">
+          <textPath href="#t1-tools" startOffset="50%" text-anchor="middle">
+            50+ REAL CYBERSECURITY TOOLS · 5 ISSUES · COMPLETE SERIES
+          </textPath>
+        </text>
+
+        <!-- ══ OUTER RIM ══ -->
+        <circle cx="240" cy="240" r="231" fill="none" stroke="#1a6aff" stroke-width="3.5" opacity="0.55"/>
+        <circle cx="240" cy="240" r="227" fill="none" stroke="#000510" stroke-width="2.5"/>
+
+        <!-- Tick marks -->
+        <g stroke="#1a6aff" stroke-width="1.2" opacity="0.6">
+          <line x1="240" y1="10"  x2="240" y2="22"/>
+          <line x1="240" y1="458" x2="240" y2="470"/>
+          <line x1="10"  y1="240" x2="22"  y2="240"/>
+          <line x1="458" y1="240" x2="470" y2="240"/>
+          <line x1="59"  y1="59"  x2="67"  y2="67"/>
+          <line x1="421" y1="59"  x2="413" y2="67"/>
+          <line x1="59"  y1="421" x2="67"  y2="413"/>
+          <line x1="421" y1="421" x2="413" y2="413"/>
+        </g>
+
+        <!-- ══ HUB RING ══ -->
+        <circle cx="240" cy="240" r="34" fill="#0b1428" stroke="#2a4488" stroke-width="1.5"/>
+        <circle cx="240" cy="240" r="29" fill="#080e1e"/>
+        <text font-family="'Bangers',Impact,fantasy" font-size="8"
+              fill="#1a6aff" letter-spacing="2">
+          <textPath href="#t1-hub" startOffset="50%" text-anchor="middle">AC</textPath>
+        </text>
+
+        <!-- ══ CENTER HOLE ══ -->
+        <circle cx="240" cy="240" r="16" fill="white"/>
+
+      </g>
+    </svg>
+  </div>
+
+  <!-- ═══════════════════  LABEL 2  ═══════════════════ -->
+  <div class="label-wrap">
+    <svg viewBox="0 0 480 480" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <clipPath id="c2-disc">
+          <circle cx="240" cy="240" r="238"/>
+        </clipPath>
+        <clipPath id="c2-full">
+          <path fill-rule="evenodd"
+            d="M240,2 A238,238 0 1,1 239.999,2 Z
+               M240,224 A16,16 0 1,0 240.001,224 Z"/>
+        </clipPath>
+        <radialGradient id="g2-bg" cx="50%" cy="38%" r="55%">
+          <stop offset="0%"   stop-color="#0e1d40"/>
+          <stop offset="55%"  stop-color="#06091c"/>
+          <stop offset="100%" stop-color="#020408"/>
+        </radialGradient>
+        <radialGradient id="g2-rim" cx="50%" cy="50%" r="50%">
+          <stop offset="82%"  stop-color="transparent"/>
+          <stop offset="100%" stop-color="#1040ff" stop-opacity="0.55"/>
+        </radialGradient>
+        <linearGradient id="g2-logobg" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%"   stop-color="#000814" stop-opacity="0.85"/>
+          <stop offset="100%" stop-color="#000814" stop-opacity="0.3"/>
+        </linearGradient>
+        <filter id="f2-glow" x="-40%" y="-40%" width="180%" height="180%">
+          <feGaussianBlur stdDeviation="4" result="blur"/>
+          <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+        </filter>
+        <filter id="f2-logo" x="-10%" y="-10%" width="120%" height="120%">
+          <feGaussianBlur stdDeviation="2" result="blur"/>
+          <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+        </filter>
+        <filter id="f2-char" x="-5%" y="-5%" width="110%" height="110%">
+          <feDropShadow dx="0" dy="0" stdDeviation="6" flood-color="#1a6aff" flood-opacity="0.7"/>
+        </filter>
+        <pattern id="g2-hex" x="0" y="0" width="30" height="26" patternUnits="userSpaceOnUse">
+          <polygon points="15,1 29,8.5 29,17.5 15,25 1,17.5 1,8.5"
+            fill="none" stroke="#1a3a6a" stroke-width="0.5" opacity="0.28"/>
+        </pattern>
+        <path id="t2-top"    d="M 72,240  A 168,168 0 0,1 408,240"/>
+        <path id="t2-sub"    d="M 90,240  A 150,150 0 0,1 390,240"/>
+        <path id="t2-face"   d="M 114,240 A 126,126 0 0,1 366,240"/>
+        <path id="t2-bottom" d="M 68,258  A 172,172 0 0,0 412,258"/>
+        <path id="t2-tools"  d="M 105,257 A 135,135 0 0,0 375,257"/>
+        <path id="t2-hub"    d="M 217.5,240 A 22.5,22.5 0 0,1 262.5,240"/>
+      </defs>
+
+      <g clip-path="url(#c2-full)">
+
+        <circle cx="240" cy="240" r="238" fill="url(#g2-bg)"/>
+        <circle cx="240" cy="240" r="238" fill="url(#g2-hex)"/>
+        <circle cx="240" cy="240" r="238" fill="url(#g2-rim)"/>
+
+        <g fill="white">
+          <circle cx="58"  cy="82"  r="1.1" opacity=".55"/>
+          <circle cx="118" cy="48"  r="0.7" opacity=".55"/>
+          <circle cx="198" cy="36"  r="1.4" opacity=".6"/>
+          <circle cx="308" cy="52"  r="0.9" opacity=".55"/>
+          <circle cx="388" cy="72"  r="1.2" opacity=".55"/>
+          <circle cx="432" cy="138" r="0.8" opacity=".5"/>
+          <circle cx="442" cy="208" r="1.1" opacity=".55"/>
+          <circle cx="422" cy="318" r="0.7" opacity=".5"/>
+          <circle cx="382" cy="398" r="1.3" opacity=".6"/>
+          <circle cx="292" cy="442" r="0.9" opacity=".55"/>
+          <circle cx="182" cy="436" r="1.1" opacity=".55"/>
+          <circle cx="98"  cy="392" r="0.8" opacity=".5"/>
+          <circle cx="46"  cy="312" r="1.2" opacity=".55"/>
+          <circle cx="52"  cy="202" r="0.7" opacity=".5"/>
+          <circle cx="82"  cy="118" r="2"   opacity=".85" filter="url(#f2-glow)"/>
+          <circle cx="392" cy="182" r="1.8" opacity=".85" filter="url(#f2-glow)"/>
+          <circle cx="262" cy="442" r="2.1" opacity=".85" filter="url(#f2-glow)"/>
+          <circle cx="138" cy="398" r="1.6" opacity=".8"  filter="url(#f2-glow)"/>
+        </g>
+
+        <circle cx="368" cy="80" r="24" fill="#091e4a" opacity="0.85"/>
+        <circle cx="368" cy="80" r="24" fill="none" stroke="#1a4a99" stroke-width="0.8" opacity="0.5"/>
+        <ellipse cx="368" cy="80" rx="37" ry="8" fill="none" stroke="#2255aa" stroke-width="1.8" opacity="0.55"/>
+
+        <circle cx="240" cy="240" r="172" fill="none" stroke="#1a6aff" stroke-width="0.7" opacity="0.2"/>
+        <circle cx="240" cy="240" r="155" fill="none" stroke="#1a6aff" stroke-width="0.5" opacity="0.15"/>
+        <circle cx="240" cy="240" r="115" fill="none" stroke="#0840bb" stroke-width="1"   opacity="0.22"/>
+
+        <image href="../../../art/CyberChief.png"
+          x="130" y="120" width="220" height="220"
+          clip-path="url(#c2-disc)"
+          preserveAspectRatio="xMidYMid meet"
+          filter="url(#f2-char)"
+          opacity="1"/>
+
+        <text font-family="'Bangers',Impact,fantasy" font-size="14"
+              fill="#5577aa" letter-spacing="4.5">
+          <textPath href="#t2-top" startOffset="50%" text-anchor="middle">
+            MIKE ANDERSON PRESENTS
+          </textPath>
+        </text>
+
+        <text font-family="'Bangers',Impact,fantasy" font-size="12"
+              fill="#ffe84d" letter-spacing="3" opacity="0.9">
+          <textPath href="#t2-sub" startOffset="50%" text-anchor="middle">
+            5-ISSUE COMPLETE SERIES
+          </textPath>
+        </text>
+
+        <!-- ══ DISC FACE: CYBERCHIEF ══ -->
+        <text font-family="'Bangers',Impact,fantasy" font-size="20"
+              fill="#ffe84d" letter-spacing="3" filter="url(#f2-glow)">
+          <textPath href="#t2-face" startOffset="50%" text-anchor="middle">
+            CYBERCHIEF
+          </textPath>
+        </text>
+
+        <text font-family="'Bangers',Impact,fantasy" font-size="15.5"
+              fill="#ffe84d" letter-spacing="3.5" filter="url(#f2-glow)">
+          <textPath href="#t2-bottom" startOffset="50%" text-anchor="middle">
+            DEFENDER  OF  THE  NETWORK
+          </textPath>
+        </text>
+
+        <text font-family="'Bangers',Impact,fantasy" font-size="9.5"
+              fill="#00dd77" letter-spacing="2" opacity="0.85">
+          <textPath href="#t2-tools" startOffset="50%" text-anchor="middle">
+            50+ REAL CYBERSECURITY TOOLS · 5 ISSUES · COMPLETE SERIES
+          </textPath>
+        </text>
+
+        <circle cx="240" cy="240" r="231" fill="none" stroke="#1a6aff" stroke-width="3.5" opacity="0.55"/>
+        <circle cx="240" cy="240" r="227" fill="none" stroke="#000510" stroke-width="2.5"/>
+
+        <g stroke="#1a6aff" stroke-width="1.2" opacity="0.6">
+          <line x1="240" y1="10"  x2="240" y2="22"/>
+          <line x1="240" y1="458" x2="240" y2="470"/>
+          <line x1="10"  y1="240" x2="22"  y2="240"/>
+          <line x1="458" y1="240" x2="470" y2="240"/>
+          <line x1="59"  y1="59"  x2="67"  y2="67"/>
+          <line x1="421" y1="59"  x2="413" y2="67"/>
+          <line x1="59"  y1="421" x2="67"  y2="413"/>
+          <line x1="421" y1="421" x2="413" y2="413"/>
+        </g>
+
+        <circle cx="240" cy="240" r="34" fill="#0b1428" stroke="#2a4488" stroke-width="1.5"/>
+        <circle cx="240" cy="240" r="29" fill="#080e1e"/>
+        <text font-family="'Bangers',Impact,fantasy" font-size="8"
+              fill="#1a6aff" letter-spacing="2">
+          <textPath href="#t2-hub" startOffset="50%" text-anchor="middle">AC</textPath>
+        </text>
+
+        <circle cx="240" cy="240" r="16" fill="white"/>
+
+      </g>
+    </svg>
+  </div>
+
+</div><!-- /print-sheet -->
+
+</body>
+</html>
