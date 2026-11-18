@@ -19,7 +19,7 @@
 
 **Composition:** Full-bleed, vertical orientation. Extreme cinematic scope.
 
-**FOREGROUND:** CyberChief stands center-frame on the crumbling, crystalline surface of Planet Musk. His blue and silver armored suit is battle-worn but his chest emblem "LRN" blazes brighter than ever. His rectangular BLACK-FRAMED GLASSES reflect the dying light of his homeworld.
+**FOREGROUND:** CyberChief stands center-frame on the crumbling, crystalline surface of Planet Musk. His blue and silver armored suit is battle-worn but his chest emblem "CYBER CHIEF" blazes brighter than ever. His rectangular BLACK-FRAMED GLASSES reflect the dying light of his homeworld.
 
 **MID-GROUND LEFT:** Dr. Elara Voss stands at CyberChief's side with quantum equipment glowing violet-white.
 
