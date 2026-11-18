@@ -62,7 +62,7 @@ powershell -NoProfile -ExecutionPolicy Bypass -Command ^
     "$ws = New-Object -ComObject WScript.Shell; ^
      $s = $ws.CreateShortcut('%USERPROFILE%\Desktop\CyberChief - Defender of the Network.lnk'); ^
      $s.TargetPath = '%INSTALL_DIR%\issues\index.html'; ^
-     $s.IconLocation = '%INSTALL_DIR%\art\cyberchief.ico'; ^
+     $s.IconLocation = '%INSTALL_DIR%\art\v2\cyberchief.ico'; ^
      $s.Description = 'CyberChief: Defender of the Network - Comic Series by Mike Anderson'; ^
      $s.WorkingDirectory = '%INSTALL_DIR%\issues'; ^
      $s.Save()" >nul 2>&1
@@ -75,7 +75,7 @@ powershell -NoProfile -ExecutionPolicy Bypass -Command ^
     "$ws = New-Object -ComObject WScript.Shell; ^
      $s = $ws.CreateShortcut('%STARTMENU%\CyberChief\CyberChief - Defender of the Network.lnk'); ^
      $s.TargetPath = '%INSTALL_DIR%\issues\index.html'; ^
-     $s.IconLocation = '%INSTALL_DIR%\art\cyberchief.ico'; ^
+     $s.IconLocation = '%INSTALL_DIR%\art\v2\cyberchief.ico'; ^
      $s.Description = 'CyberChief: Defender of the Network'; ^
      $s.WorkingDirectory = '%INSTALL_DIR%\issues'; ^
      $s.Save()" >nul 2>&1

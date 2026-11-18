@@ -162,7 +162,7 @@ def md_to_issue_html(md: str) -> str:
   <a href="index.html">ALL ISSUES ▶</a>
 </nav>
 <div class="cover-spread" style="padding:48px 24px;text-align:center;background:radial-gradient(circle at 50% 20%,#113a7a,#080810 65%);">
-  <img src="../art/CyberChief Logo.png" alt="CyberChief Logo" style="max-width:300px;filter:drop-shadow(0 0 24px rgba(77,195,255,.7));">
+  <img src="../art/v2/CyberChief Logo.png" alt="CyberChief Logo" style="max-width:300px;filter:drop-shadow(0 0 24px rgba(77,195,255,.7));">
   <div style="font-family:'Bangers',Impact,fantasy;font-size:3rem;letter-spacing:6px;color:var(--caption-yellow);margin-top:24px;">THE SIGNAL FROM MUSK</div>
   <div style="font-family:'Bangers',Impact,fantasy;font-size:1.4rem;letter-spacing:3px;color:var(--blue-glow);">CONTAINERS OF CHAOS</div>
   <div style="margin-top:18px;color:#aab;">Issue #6 · Cloud &amp; Container Security · 10 New Tools · 65 Total</div>
